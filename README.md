@@ -1,5 +1,6 @@
 # 🔥 WHAT IS ScytheX 🔥
 **ScytheX is a powerful DDoS attack tool that supports Layer 3, Layer 4, and Layer 7 attacks.**
+- **python 3.12.6**
 
 # Screenshot 📷 :
 ![image](https://github.com/user-attachments/assets/159c9bf6-dd1d-4e80-b3a1-8296a6f32dda)
