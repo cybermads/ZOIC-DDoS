@@ -62,9 +62,9 @@ def Tools():
                 os.system('cls' if os.name == 'nt' else 'clear')
                 print(TextColors.BOLD + """
                ...                            
-             ;::::;     ==============        
-           ;::::; :;      DNS LOCKUP          
-         ;:::::'   :;   ==============        
+             ;::::;                           
+           ;::::; :;                          
+         ;:::::'   :;                         
         ;:::::;     ;.                        
        ,:::::'       ;           OOO\         
        ::::::;       ;          OOOOO\        
@@ -81,7 +81,10 @@ def Tools():
  ::::`:::::::`;::::::::;:::#                OO
  `:::::`::::::::::::;'`:;::#                O 
   `:::::`::::::::;' /  / `:#                  
-   ::::::`:::::;'  /  /   `#    
+   ::::::`:::::;'  /  /   `#  
+
+   | -- DNS LOCKUP
+   | -- coded by 건우Sec
                 """ + TextColors.RESET)
             
                 host = input(TextColors.BOLD + "host > "+ TextColors.RESET)
