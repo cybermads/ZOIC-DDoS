@@ -21,6 +21,20 @@
 - ### Layer7
 ![image](https://github.com/user-attachments/assets/d9e4458c-3b64-43cb-8ef6-4e5c42b842a7)
 
+# HOW TO USE ❓
+```
+git clone https://github.com/madanokr001/ScytheX.git
+```
+```
+cd ScytheX/ScytheX
+```
+ls
+```
+```
+python ScytheX.py
+```
+
+
 
 
 
