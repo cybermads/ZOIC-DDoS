@@ -35,6 +35,10 @@ ls
 python ScytheX.py
 ```
 
+# About
+ScytheX is a powerful DDoS attack tool designed for testing and evaluating the resilience of network systems. It supports various types of attacks across different layers, including
+
+
 
 
 
