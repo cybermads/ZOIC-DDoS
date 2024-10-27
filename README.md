@@ -4,8 +4,8 @@
 - **https://dstat.cc/**
 
 # Screenshot 📷 :
-![image](https://github.com/user-attachments/assets/159c9bf6-dd1d-4e80-b3a1-8296a6f32dda)
-![image](https://github.com/user-attachments/assets/dd62bba0-70e6-45ad-99af-ec8ae9347fce)
+![image](https://github.com/user-attachments/assets/00eb3a48-340e-400a-9043-c53610d0e662)
+
 
 
 # OPTION 🔍
