@@ -121,7 +121,6 @@ def layer4():
                 for thread in threads:  # 모든 스레드가 종료될 때까지 대기
                     thread.join()  
 
-            # 메인 블록
             logo()  
             target_ip = input(TextColors.BOLD + "IP > ")  
             target_port = int(input(TextColors.BOLD + "Port > "))  
