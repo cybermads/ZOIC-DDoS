@@ -48,7 +48,6 @@ def iptool_main():
    ::::::`:::::;'  /  /   `#  
           
  - lock     |    dnslockup
- - nmap     |    nmap port scanner
  - exit     |    leave Tools menu
 
     """ + TextColors.RESET)
