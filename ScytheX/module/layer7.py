@@ -131,7 +131,7 @@ def layer7():
   `:::::`::::::::;' /  / `:#                  
    ::::::`:::::;'  /  /   `#
 
-  | - post request attack
+  | - get request attack
   | - coded by 건우Sec   
                               """ + TextColors.RESET)
             # GET request 함수
@@ -261,7 +261,7 @@ def layer7():
   `:::::`::::::::;' /  / `:#                  
    ::::::`:::::;'  /  /   `#
 
-  | - get request attack
+  | - head request attack
   | - coded by 건우Sec   
                         """ + TextColors.RESET)
                 
