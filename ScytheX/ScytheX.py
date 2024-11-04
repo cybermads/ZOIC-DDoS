@@ -77,7 +77,8 @@ def main():
             layer4()
 
         elif select == "l7" or select.lower() == "7":
-            layer7()
+            print("Fix soon..")
+            input()
             
 
         elif select == "exit" or select.lower() == "e":
