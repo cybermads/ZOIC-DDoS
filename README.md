@@ -1,7 +1,8 @@
 # ZOIC - ddos attack tool 🔥
 
 # ScreenShot 📷
-![image](https://github.com/user-attachments/assets/4623a49b-7c33-4c23-88c4-d41bee9357aa)
+![image](https://github.com/user-attachments/assets/a7c8cc65-5fb3-4534-9d63-88742bb296be)
+
 ![image](https://github.com/user-attachments/assets/a390ca53-b6c7-4a93-880e-8fc1f8c735cf)
 
 
