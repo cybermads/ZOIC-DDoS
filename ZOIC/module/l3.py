@@ -92,7 +92,7 @@ def layer3():
             ip = input(TextColors.WHITE +"IP > "+ TextColors.RESET)
             Bytes = input(TextColors.WHITE +"Bytes > "+ TextColors.RESET)
 
-            subprocess.run(['ping', '-t', ip, '-l', str(Bytes)], check=True)
+            subprocess.run(['ping', ip, '-l', str(Bytes)], check=True)
 
             input("")
             
