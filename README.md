@@ -4,9 +4,6 @@
 ![image](https://github.com/user-attachments/assets/4623a49b-7c33-4c23-88c4-d41bee9357aa)
 ![image](https://github.com/user-attachments/assets/a390ca53-b6c7-4a93-880e-8fc1f8c735cf)
 
-# OS
-## Linux ✅
-## Windows ✅
 
 # Performance 🔥
 **LAYER 4**
@@ -29,6 +26,9 @@ ls
 ```
 python main.py
 ```
+
+## Windows ✅
+## Linux ✅
 
 # About 🤑
 Zoic DDoS Multi Tools is a suite of software tools designed to facilitate testing and simulation of Distributed Denial of Service (DDoS) attacks for network security professionals. It includes multiple functionalities to simulate different types of DDoS attacks, helping organizations assess the resilience of their infrastructure under stress conditions
