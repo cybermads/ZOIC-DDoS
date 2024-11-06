@@ -50,7 +50,7 @@ def logo():
 def layer7():
     while True:
         logo()
-        select = input(TextColors.DARK_GREEN + """═══[root@ZOIC~$]                                                                   
+        select = input(TextColors.GREEN + """═══[root@ZOIC~$]                                                                   
 ═══> """ + TextColors.RESET)
 
         if select == "1" or select.lower() == "1":
