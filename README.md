@@ -4,20 +4,6 @@
 ![image](https://github.com/user-attachments/assets/4623a49b-7c33-4c23-88c4-d41bee9357aa)
 ![image](https://github.com/user-attachments/assets/a390ca53-b6c7-4a93-880e-8fc1f8c735cf)
 
-# Options 🔎
-- **INFO MENU**
-- **[01] Update**
-- **[02] EXIT**
-
-- **DDOS ATTACK MENU**
-- **[03] LAYER 3**
-- **[04] LAYER 4**
-- **[05] LAYER 7**
-
-- **TOOLS MENU**
-- **[06] NAMP**
-- **[07] DNSLOCKUP**
-
 # Performance 🔥
 **LAYER 4**
 ![image](https://github.com/user-attachments/assets/f9cb37c7-6de2-4883-bfb5-8dcd75b2d14c)
