@@ -50,7 +50,7 @@ def logo():
 def layer7():
     while True:
         logo()
-        select = input(TextColors.GREEN + """═══[root@ZOIC~$]                                                                   
+        select = input(TextColors.DARK_GREEN + """═══[root@ZOIC~$]                                                                   
 ═══> """ + TextColors.RESET)
 
         if select == "1" or select.lower() == "1":
@@ -85,8 +85,8 @@ def layer7():
                     thread.join()  
 
             url = input(TextColors.WHITE + "URL > "+ TextColors.RESET)
-            threads = int(input(TextColors.WHITE + "Thread (10~50) > "+ TextColors.RESET))  
-            get_requests = int(input(TextColors.WHITE + "Get (100~1000) > "+ TextColors.RESET))    
+            threads = int(input(TextColors.WHITE + "Thread (5~30) > "+ TextColors.RESET))  
+            get_requests = int(input(TextColors.WHITE + "Get (100~500) > "+ TextColors.RESET))    
 
             start_threads(url, threads, get_requests)
 
@@ -123,8 +123,8 @@ def layer7():
                     thread.join()
 
             url = input(TextColors.WHITE + "URL > "+ TextColors.RESET)
-            threads = int(input(TextColors.WHITE + "Thread (10~50) > "+ TextColors.RESET))  
-            post_requests = int(input(TextColors.WHITE + "Get (100~1000) > "+ TextColors.RESET))   
+            threads = int(input(TextColors.WHITE + "Thread (5~30) > "+ TextColors.RESET))  
+            post_requests = int(input(TextColors.WHITE + "Get (100~500) > "+ TextColors.RESET))   
 
             start_threads(url, threads, post_requests)
 
@@ -160,8 +160,8 @@ def layer7():
                     thread.join()
 
             url = input(TextColors.WHITE + "URL > "+ TextColors.RESET)
-            threads = int(input(TextColors.WHITE + "Thread (10~50) > "+ TextColors.RESET))  
-            head_requests = int(input(TextColors.WHITE + "Get (100~1000) > "+ TextColors.RESET))  
+            threads = int(input(TextColors.WHITE + "Thread (5~30) > "+ TextColors.RESET))  
+            head_requests = int(input(TextColors.WHITE + "Get (100~500) > "+ TextColors.RESET))  
 
             start_threads(url, threads, head_requests)
 
