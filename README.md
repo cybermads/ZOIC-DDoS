@@ -32,7 +32,8 @@ python main.py
 ## Linux ✅
 
 # About 🤑
-use small server
+**use small server**
+**enjoy**
 
 
 
