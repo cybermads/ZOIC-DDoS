@@ -22,10 +22,11 @@ class TextColors:
     LIGHT_GREEN = "\033[92m" 
     RADICAL_RED = "\033[38;5;160m"
     DARK_GREEN = "\033[38;5;28m"
+    SUPER_BRIGHT_LIME_GREEN = '\033[38;2;102;255;102m'
 
 def upadate_main():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print(TextColors.LIGHT_GREEN+ """
+    print(TextColors.SUPER_BRIGHT_LIME_GREEN+ """
 ██╗   ██╗██████╗ ██████╗  █████╗ ████████╗███████╗
 ██║   ██║██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝██╔════╝
 ██║   ██║██████╔╝██║  ██║███████║   ██║   █████╗  
