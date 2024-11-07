@@ -51,7 +51,7 @@ def logo():
         
     icmp  |  icmpflood
     ping  |  ping of death
-    exit  |  exit layer3 menu
+    exit  |  exit zoic menu
 
           
 """+ TextColors.RESET)
