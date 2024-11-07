@@ -25,32 +25,40 @@ class TextColors:
     LIGHT_GREEN = "\033[92m" 
     RADICAL_RED = "\033[38;5;160m"
     DARK_GREEN = "\033[38;5;28m"
+    SUPER_BRIGHT_LIME_GREEN = '\033[38;2;102;255;102m'
+    BRIGHT_WHITE = '\033[97m'
+    BRIGHT_LIME_GREEN_RGB = '\033[38;2;50;205;50m'
 
 def logo():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print(TextColors.LIGHT_GREEN + """
-        ██╗      █████╗ ██╗   ██╗███████╗██████╗     ██╗  ██╗
-        ██║     ██╔══██╗╚██╗ ██╔╝██╔════╝██╔══██╗    ██║  ██║
-        ██║     ███████║ ╚████╔╝ █████╗  ██████╔╝    ███████║
-        ██║     ██╔══██║  ╚██╔╝  ██╔══╝  ██╔══██╗    ╚════██║
-        ███████╗██║  ██║   ██║   ███████╗██║  ██║         ██║
-        ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝         ╚═╝ 
+    print(TextColors.SUPER_BRIGHT_LIME_GREEN + """
+    ██╗      █████╗ ██╗   ██╗███████╗██████╗     ██╗  ██╗
+    ██║     ██╔══██╗╚██╗ ██╔╝██╔════╝██╔══██╗    ██║  ██║
+    ██║     ███████║ ╚████╔╝ █████╗  ██████╔╝    ███████║
+    ██║     ██╔══██║  ╚██╔╝  ██╔══╝  ██╔══██╗    ╚════██║
+    ███████╗██║  ██║   ██║   ███████╗██║  ██║         ██║
+    ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝         ╚═╝ 
+    """+ TextColors.RESET)
+    print(TextColors.BRIGHT_LIME_GREEN_RGB + """
+    --------------------------------------
+    Revolt : https://rvlt.gg/PeewQeV9
+    Github : https://github.com/madanokr001
+    coded by 건우Sec
+    --------------------------------------
+        
+    Layer4 commands line:
+        
+    syn   |  syn flood attack
+    ping  |  udp flood attack
+    exit  |  exit layer3 menu
+
           
-╔════════════════════════════════════════════════════════════════════╗
-║                   https://doxwebd.serveo.net                       ║
-║════════════════════════════════════════════════════════════════════║
-║                                                                    ║
-║                      syn  |  syn flood attack                      ║
-║                      udp  |  udp flood attack                      ║
-║                      exit |  exit zoic                             ║
-║                                                                    ║                                                                  
-╚════════════════════════════════════════════════════════════════════╝
-""")
+"""+ TextColors.RESET)
 
 def layer4():
     while True:
         logo()
-        select = input(TextColors.GREEN + """═══[root@ZOIC~$]                                                                   
+        select = input(TextColors.SUPER_BRIGHT_LIME_GREEN + """═══[root@ZOIC~$]                                                                   
 ═══> """ + TextColors.RESET)
 
         if select == "syn" or select.lower() == "1":
