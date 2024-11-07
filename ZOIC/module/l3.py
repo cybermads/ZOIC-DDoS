@@ -51,7 +51,7 @@ def logo():
 def layer3():
     while True:
         logo()
-        select = input(TextColors.DARK_GREEN + """═══[root@ZOIC~$]                                                                   
+        select = input(TextColors.GREEN + """═══[root@ZOIC~$]                                                                   
 ═══> """ + TextColors.RESET)
 
         if select == "icmp" or select.lower() == "1":
