@@ -97,7 +97,7 @@ def logo():
 ║                     get   |  get  request attack                   ║
 ║                     post  |  post request attack                   ║
 ║                     head  |  head request attack                   ║
-║                     eixt  |  exit zoic                             ║
+║                     exit  |  exit zoic                             ║
 ║                                                                    ║
 ║                                                                    ║
 ║                                                                    ║                                                                     
