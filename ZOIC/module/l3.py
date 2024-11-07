@@ -105,7 +105,7 @@ def layer3():
             input("")
             
             
-        elif select == "3" or select.lower() == "3":
+        elif select == "exit" or select.lower() == "3":
             sys.exit()
     
              
