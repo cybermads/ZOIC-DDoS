@@ -113,7 +113,7 @@ def logo():
 def layer7():
     while True:
         logo()
-        select = input(TextColors.GREEN + """═══[root@ZOIC~$]                                                                   
+        select = input(TextColors.BRIGHT_LIME_GREEN_RGB + """═══[root@ZOIC~$]                                                                   
 ═══> """ + TextColors.RESET)
 
         if select == "get" or select.lower() == "1":
