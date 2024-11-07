@@ -49,7 +49,7 @@ def logo():
     Layer4 commands line:
         
     syn   |  syn flood attack
-    ping  |  udp flood attack
+    udp   |  udp flood attack
     exit  |  exit layer3 menu
 
           
