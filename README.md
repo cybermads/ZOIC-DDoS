@@ -2,6 +2,7 @@
 
 # ScreenShot 📷
 ![image](https://github.com/user-attachments/assets/ed97a46e-b591-4d71-bac1-830e71719729)
+![image](https://github.com/user-attachments/assets/bf0f5ed8-2551-46b5-b23c-91aa44e0cd76)
 
 
 
@@ -31,8 +32,8 @@ python main.py
 ## Linux ✅
 
 # About 🤑
-**use small server**
-**enjoy**
+**use small server attack**
+**zoic version 2.1**
 
 
 
