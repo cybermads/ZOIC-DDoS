@@ -20,11 +20,12 @@ class TextColors:
     LIGHT_RED = "\033[91m"
     LIGHT_GREEN = "\033[92m"
     RADICAL_RED = "\033[38;5;160m" 
+    SUPER_BRIGHT_LIME_GREEN = '\033[38;2;102;255;102m'
     BRIGHT_LIME_GREEN_RGB = '\033[38;2;50;205;50m'
 
 def rdns():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print(TextColors.BRIGHT_LIME_GREEN_RGB + """
+    print(TextColors.SUPER_BRIGHT_LIME_GREEN + """
 ██████╗ ███████╗██╗   ██╗███████╗██████╗ ███████╗███████╗
 ██╔══██╗██╔════╝██║   ██║██╔════╝██╔══██╗██╔════╝██╔════╝
 ██████╔╝█████╗  ██║   ██║█████╗  ██████╔╝███████╗█████╗  
