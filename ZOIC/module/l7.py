@@ -82,26 +82,30 @@ user_agent = [
 
 def logo():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print(TextColors.LIGHT_GREEN + """
-        ██╗      █████╗ ██╗   ██╗███████╗██████╗     ███████╗
-        ██║     ██╔══██╗╚██╗ ██╔╝██╔════╝██╔══██╗    ╚════██║
-        ██║     ███████║ ╚████╔╝ █████╗  ██████╔╝        ██╔╝
-        ██║     ██╔══██║  ╚██╔╝  ██╔══╝  ██╔══██╗       ██╔╝ 
-        ███████╗██║  ██║   ██║   ███████╗██║  ██║       ██║  
-        ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝       ╚═╝  
+    print(TextColors.SUPER_BRIGHT_LIME_GREEN + """
+    ██╗      █████╗ ██╗   ██╗███████╗██████╗     ███████╗
+    ██║     ██╔══██╗╚██╗ ██╔╝██╔════╝██╔══██╗    ╚════██║
+    ██║     ███████║ ╚████╔╝ █████╗  ██████╔╝        ██╔╝
+    ██║     ██╔══██║  ╚██╔╝  ██╔══╝  ██╔══██╗       ██╔╝ 
+    ███████╗██║  ██║   ██║   ███████╗██║  ██║       ██║  
+    ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝       ╚═╝ 
+    """+ TextColors.RESET)
+    print(TextColors.BRIGHT_LIME_GREEN_RGB + """
+    --------------------------------------
+    Revolt : https://rvlt.gg/PeewQeV9
+    Github : https://github.com/madanokr001
+    coded by 건우Sec
+    --------------------------------------
+        
+    Layer7 commands line:
+        
+    get   |  GET Request attack
+    post  |  POST Request attack
+    head  |  HEAD Request attack
+    exit  |  exit zoic
+
           
-╔════════════════════════════════════════════════════════════════════╗
-║                    https://doxwebd.serveo.net                      ║ 
-║════════════════════════════════════════════════════════════════════║
-║                                                                    ║                       
-║                     get   |  get  request attack                   ║
-║                     post  |  post request attack                   ║
-║                     head  |  head request attack                   ║
-║                     exit  |  exit zoic                             ║
-║                                                                    ║
-║                                                                    ║                                                                     
-╚════════════════════════════════════════════════════════════════════╝
-""")
+"""+ TextColors.RESET)
 
 def layer7():
     while True:
@@ -145,7 +149,7 @@ def layer7():
 
             url = input(TextColors.WHITE + "URL > "+ TextColors.RESET)
             threads = int(input(TextColors.WHITE + "Thread (5~30) > "+ TextColors.RESET))  
-            get_requests = int(input(TextColors.WHITE + "Get (5~30) > "+ TextColors.RESET))    
+            get_requests = int(input(TextColors.WHITE + "Get (100~500) > "+ TextColors.RESET))    
 
             start_threads(url, threads, get_requests)
 
@@ -186,7 +190,7 @@ def layer7():
 
             url = input(TextColors.WHITE + "URL > "+ TextColors.RESET)
             threads = int(input(TextColors.WHITE + "Thread (5~30) > "+ TextColors.RESET))  
-            post_requests = int(input(TextColors.WHITE + "Get (5~30) > "+ TextColors.RESET))   
+            post_requests = int(input(TextColors.WHITE + "Get (100~500) > "+ TextColors.RESET))   
 
             start_threads(url, threads, post_requests)
 
@@ -226,7 +230,7 @@ def layer7():
 
             url = input(TextColors.WHITE + "URL > "+ TextColors.RESET)
             threads = int(input(TextColors.WHITE + "Thread (5~30) > "+ TextColors.RESET))  
-            head_requests = int(input(TextColors.WHITE + "Get (5~30) > "+ TextColors.RESET))  
+            head_requests = int(input(TextColors.WHITE + "Get (100~500) > "+ TextColors.RESET))  
 
             start_threads(url, threads, head_requests)
 
