@@ -155,7 +155,7 @@ def layer7():
 
             url = input("URL > ")
             num_threads = int(input("Threads (5~30) > "))
-            get_request = int(input("GET Request (1000~5000) > "))
+            get_request = int(input("GET Request (300~1000) > "))
             print(TextColors.YELLOW + "[*] Loading ZOIC..."+ TextColors.RESET)  
 
             start_threads(url, num_threads, get_request)
@@ -197,7 +197,7 @@ def layer7():
 
             url = input("URL > ")
             num_threads = int(input("Threads (5~30) > "))
-            post_request = int(input("POST Request (1000~5000) > "))
+            post_request = int(input("POST Request (300~1000) > "))
             print(TextColors.YELLOW + "[*] Loading ZOIC..." + TextColors.RESET)
 
             start_threads(url, num_threads, post_request)
@@ -239,7 +239,7 @@ def layer7():
 
             url = input("URL > ")
             threads = int(input("Threads (5~30) > "))  
-            head_requests = int(input(TextColors.WHITE + "HEAD Requests (1000~5000) > " + TextColors.RESET))  
+            head_requests = int(input(TextColors.WHITE + "HEAD Requests (300~1000) > " + TextColors.RESET))  
 
             print(TextColors.YELLOW + "[*] Loading ZOIC..." + TextColors.RESET)
 
