@@ -49,7 +49,7 @@ def logo():
     Layer4 commands line:
         
     syn   |  syn flood attack
-    udp   |  udp flood attack
+    ping  |  udp flood attack
     exit  |  exit layer3 menu
 
           
@@ -81,9 +81,15 @@ def layer4():
                 for thread in threads:
                     thread.join()
 
-            target_ip = input(TextColors.WHITE + "IP > "+ TextColors.RESET)  
-            target_port = int(input(TextColors.WHITE + "Port > "+ TextColors.RESET))  
-            thread_count = int(input(TextColors.WHITE + "Thread > "+ TextColors.RESET))  
+            target_ip = input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
+═══[root@TARGET-IP]                                                                   
+═══> """ + TextColors.RESET) 
+            target_port = int(input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
+═══[root@TARGET-PORT]                                                                   
+═══> """ + TextColors.RESET)) 
+            thread_count = int(input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
+═══[root@THREAD]                                                                   
+═══> """ + TextColors.RESET))
             start_flooding(target_ip, target_port, thread_count)
 
 
@@ -106,9 +112,15 @@ def layer4():
                 for thread in threads:
                     thread.join()
 
-            target_ip = input(TextColors.WHITE + "IP > "+ TextColors.RESET)  
-            target_port = int(input(TextColors.WHITE + "Port > "+ TextColors.RESET))  
-            thread_count = int(input(TextColors.WHITE + "Thread > "+ TextColors.RESET))  
+            target_ip = input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
+═══[root@TARGET-IP]                                                                   
+═══> """ + TextColors.RESET) 
+            target_port = int(input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
+═══[root@TARGET-PORT]                                                                   
+═══> """ + TextColors.RESET)) 
+            thread_count = int(input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
+═══[root@THREAD]                                                                   
+═══> """ + TextColors.RESET))
 
             start_flooding(target_ip, target_port, thread_count)
             
