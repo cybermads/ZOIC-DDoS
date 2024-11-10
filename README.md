@@ -1,11 +1,12 @@
 # ZOIC - ddos attack tool 🔥
 
-- **use small server attack**
-- **version 2.2 ✅**
-- **fix error ✅**
+- **PLS UPDATE AGAIN**
+- **VERSION 2.3 ✅**
+- **UPGRADE LAYER 7 ✅**
   
 # ScreenShot 📷
-![image](https://github.com/user-attachments/assets/d0fba40c-31dd-4690-a25e-381c30f56894)
+![image](https://github.com/user-attachments/assets/c60bd0cd-5aa8-4e2a-832a-c2e40879150e)
+
 
 
 
