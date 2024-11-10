@@ -65,9 +65,9 @@ ZOIC commands line:
 update  |  update tool
 exit    |  exit zoic  
 
-l3      |  Layer3 module   
-l4      |  Layer4 module   
-l7      |  layer7 module   
+l3      |  ICMP FLOOD 
+l4      |  SYN FLOOD , UDP FLOOD   
+l7      |  HTTP FLOOD   
 
 dns     |  dns lockup
 rdns    |  dns reverse
