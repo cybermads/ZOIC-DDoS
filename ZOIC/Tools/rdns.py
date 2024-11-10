@@ -25,7 +25,7 @@ class TextColors:
 
 def rdns():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print(TextColors.BRIGHT_LIME_GREEN_RGB + """
+    print(TextColors.SUPER_BRIGHT_LIME_GREEN + """
 ██████╗ ███████╗██╗   ██╗███████╗██████╗ ███████╗███████╗
 ██╔══██╗██╔════╝██║   ██║██╔════╝██╔══██╗██╔════╝██╔════╝
 ██████╔╝█████╗  ██║   ██║█████╗  ██████╔╝███████╗█████╗  
