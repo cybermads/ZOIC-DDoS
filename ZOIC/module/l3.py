@@ -50,8 +50,7 @@ def logo():
     Layer3 commands line:
         
     icmp  |  icmpflood
-    ping  |  ping of death
-    exit  |  exit zoic menu
+    exit  |  exit layer3 menu
 
           
 """+ TextColors.RESET)
@@ -90,21 +89,18 @@ def layer3():
                         print(TextColors.CYAN + f'[+] IP Address : {target_ip} [+] ICMP Packet : {i + 1}'+ TextColors.RESET)
                         time.sleep(0.01)
 
-            target = input(TextColors.WHITE + "IP > "+ TextColors.RESET)
-            byte_size = int(input(TextColors.WHITE + "Bytes > "+ TextColors.RESET))
-            count = int(input(TextColors.WHITE + "Count > "+ TextColors.RESET))
+            target = input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
+═══[root@TARGET-IP]                                                                   
+═══> """ + TextColors.RESET) 
+            byte_size = int(input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
+═══[root@PACKET-SIZE]                                                                   
+═══> """ + TextColors.RESET)) 
+            count = int(input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
+═══[root@PACKET-COUNT]                                                                   
+═══> """ + TextColors.RESET))
             send_packets(target, byte_size, count)
 
-        elif select == "ping" or select.lower() == "2":
-
-            ip = input(TextColors.WHITE +"IP > "+ TextColors.RESET)
-            Bytes = input(TextColors.WHITE +"Bytes > "+ TextColors.RESET)
-
-            subprocess.run(['ping', '-t', ip, '-l', str(Bytes)], check=True)
-
-            input("")
-            
-            
+               
         elif select == "exit" or select.lower() == "3":
             sys.exit()
     
