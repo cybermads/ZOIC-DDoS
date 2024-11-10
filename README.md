@@ -1,6 +1,5 @@
-# ZOIC - ddos attack tool 🔥
+# ZOIC - ddos attack tool v2.3 🔥
 
-- **PLS UPDATE AGAIN**
 - **LAST UPDATED**
 - **VERSION 2.3 ✅**
 - **UPGRADE LAYER 7 ✅**
