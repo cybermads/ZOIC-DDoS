@@ -233,7 +233,7 @@ def layer7():
 ═══[root@THREADS(5~30)]                                                                   
 ═══> """ + TextColors.RESET))
             post_request = int(input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
-═══[root@GET-REQUEST(300~1000)]                                                                   
+═══[root@POST-REQUEST(300~1000)]                                                                   
 ═══> """ + TextColors.RESET))
             print(TextColors.YELLOW + "[*] Loading ZOIC..."+ TextColors.RESET)  
 
@@ -293,7 +293,7 @@ def layer7():
 ═══[root@THREADS(5~30)]                                                                   
 ═══> """ + TextColors.RESET))
             head_request = int(input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
-═══[root@GET-REQUEST(300~1000)]                                                                   
+═══[root@HEAD-REQUEST(300~1000)]                                                                   
 ═══> """ + TextColors.RESET))
             print(TextColors.YELLOW + "[*] Loading ZOIC..."+ TextColors.RESET)  
 
