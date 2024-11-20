@@ -159,7 +159,7 @@ def layer7():
                     threads.append(thread)
 
                 while True:
-                    time.sleep(0.01)
+                    time.sleep(0.1)
 
             url = input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
 ═══[root@TARGET-URL]                                                                   
