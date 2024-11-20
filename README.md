@@ -1,6 +1,6 @@
 # ZOIC - DDoS Attack Toolkit V2 🔥
 
-- **VERSION 2.3 ✅**
+- **version 2.3 ✅**
 - **LAYER 7 FIX ✅**
   
 # ScreenShot 📷
@@ -19,6 +19,10 @@
 # LAYER 7 🔥
 ![image](https://github.com/user-attachments/assets/10c077aa-35dc-4390-8bcc-88dc8e525a6c)
 ![image](https://github.com/user-attachments/assets/b1ef44b7-8eab-45f1-b837-00e0513a5384)
+![image](https://github.com/user-attachments/assets/f8973c53-1dce-4643-8bd9-030c298aced1)
+![image](https://github.com/user-attachments/assets/a4a953b5-59e5-42ed-94fb-0697254164f3)
+
+
 
 
 
