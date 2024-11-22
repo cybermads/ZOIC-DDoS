@@ -17,18 +17,15 @@
 
 
 # LAYER 7 🔥
-![image](https://github.com/user-attachments/assets/f0b37e5f-dd70-44a5-9f2a-26b78dc36952)
+![image](https://github.com/user-attachments/assets/10c077aa-35dc-4390-8bcc-88dc8e525a6c)
+![image](https://github.com/user-attachments/assets/b1ef44b7-8eab-45f1-b837-00e0513a5384)
+
 
 # DNS LOCKUP 🔥
 ![image](https://github.com/user-attachments/assets/9a6a9836-f832-426e-87ca-2ab5f491b67c)
 
 # DNS REVERSE 🔥
 ![image](https://github.com/user-attachments/assets/5c667169-8a83-4fcf-a401-d1ae31e366ec)
-
-
-
-![image](https://github.com/user-attachments/assets/10c077aa-35dc-4390-8bcc-88dc8e525a6c)
-![image](https://github.com/user-attachments/assets/b1ef44b7-8eab-45f1-b837-00e0513a5384)
 
 
 
