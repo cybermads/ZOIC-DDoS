@@ -6,12 +6,6 @@
 # ScreenShot📷:
 ![image](https://github.com/user-attachments/assets/b8925867-8715-4224-b521-84afd9b60aab)
 
-
-
-# LAYER 3 🔥
-![image](https://github.com/user-attachments/assets/6a7241e9-7df9-45c2-b5f2-e70f4da7698b)
-
-
 # LAYER 4 🔥
 ![image](https://github.com/user-attachments/assets/68571387-f1af-4790-bcf6-1f617778103a)
 ![image](https://github.com/user-attachments/assets/3919929a-065e-4de9-8317-31bb310f3a8b)
