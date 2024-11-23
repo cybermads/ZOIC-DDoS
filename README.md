@@ -17,8 +17,10 @@
 
 
 # LAYER 7 🔥
+![image](https://github.com/user-attachments/assets/192be076-6b4b-4ff7-9668-d189b8d077ee)
+
 ![image](https://github.com/user-attachments/assets/10c077aa-35dc-4390-8bcc-88dc8e525a6c)
-![image](https://github.com/user-attachments/assets/b1ef44b7-8eab-45f1-b837-00e0513a5384)
+
 
 
 # DNS LOCKUP 🔥
