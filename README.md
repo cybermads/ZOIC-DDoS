@@ -18,21 +18,7 @@
 
 # LAYER 7 🔥
 ![image](https://github.com/user-attachments/assets/d80f08dd-cd10-44ba-b869-501ebfa7bfd4)
-
-
-
-# DNS LOCKUP 🔥
-![image](https://github.com/user-attachments/assets/9a6a9836-f832-426e-87ca-2ab5f491b67c)
-
-# DNS REVERSE 🔥
-![image](https://github.com/user-attachments/assets/5c667169-8a83-4fcf-a401-d1ae31e366ec)
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/9a1a53c8-66c1-4344-acb9-410802cda8f7)
 
 
 # HOW TO USE ❓
@@ -50,7 +36,7 @@ python main.py
 ```
 
 ## Windows ✅
-## Linux ✅
+## Linux ✅ not work layer7
 
 # About 🤑
 **We greatly appreciate your feedback and suggestions. Please feel free to share any thoughts you may have; your input is invaluable to us!**
