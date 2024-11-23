@@ -369,7 +369,7 @@ def layer7():
 """)))
             
             get_request = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@GET-REQUEST(100~1000)]                                                                   
+═══[root@COOKIE-REQUEST(100~1000)]                                                                   
 ═══> 
 """)))
             print(Colorate.Horizontal(Colors.green_to_white, "[+] Loading ZOIC..."))   
