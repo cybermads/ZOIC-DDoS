@@ -17,8 +17,7 @@
 
 
 # LAYER 7 🔥
-![image](https://github.com/user-attachments/assets/a27b7475-37d4-4c8e-82ae-28ab2571163f)
-![image](https://github.com/user-attachments/assets/192be076-6b4b-4ff7-9668-d189b8d077ee)
+![image](https://github.com/user-attachments/assets/d80f08dd-cd10-44ba-b869-501ebfa7bfd4)
 
 
 
