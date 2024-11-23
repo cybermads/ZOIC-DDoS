@@ -28,7 +28,7 @@
 git clone https://github.com/madanokr001/ZOIC-multi-ddos-tools.git
 ```
 ```
-cd ZOIC-DDoS-Attack-Tools-V2/ZOIC
+cd ZOIC-DDoS-Attack-Tools-V3/ZOIC
 ```
 ```
 ls
