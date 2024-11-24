@@ -38,7 +38,7 @@ python main.py
 ```
 
 ## Windows ✅
-## Linux ✅ not work layer7
+## Linux ✅ work !!
 
 # About 🤑
 **We greatly appreciate your feedback and suggestions. Please feel free to share any thoughts you may have; your input is invaluable to us!**
