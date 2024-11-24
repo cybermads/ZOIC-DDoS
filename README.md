@@ -1,12 +1,12 @@
 # ZOIC - DDoS Attack Toolkit V3 🔥
 
 - **version 3.0 ✅**
-- **DELETED LAYER 3 ✅**
-- **COOKIE OVERFLOW 🍪**
-- **HTTP/2 REQUEST ✅**
+- **COOKIE Overflow 🍪**
+- **HTTP/2 Request**
   
 # ScreenShot📷:
-![image](https://github.com/user-attachments/assets/a85813ab-55c5-4a94-b69c-edb91d6b0982)
+![image](https://github.com/user-attachments/assets/05609227-a8a5-4819-95ac-e1ddf2908022)
+
 
 
 # LAYER 4 🔥
