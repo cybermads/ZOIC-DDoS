@@ -16,7 +16,7 @@ def dnslockup():
     s = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
 
     url = input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@HOST(EX : google.com]                                                                   
+═══[root@HOST]                                                                   
 ═══> 
 """))
 
