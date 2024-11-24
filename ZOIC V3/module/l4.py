@@ -26,8 +26,6 @@ def logo():
         
     syn   |  syn flood attack
     udp   |  udp flood attack
-    exit  |  exit layer3 menu
-
           
 """))
 
@@ -107,11 +105,7 @@ def layer4():
 ═══> 
 """)))
             start_flooding(target_ip, target_port, thread_count)
-            
 
-        elif select == "exit" or select.lower() == "2":
-            sys.exit()
-    
              
 
 
