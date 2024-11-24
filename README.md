@@ -30,7 +30,7 @@
 git clone https://github.com/madanokr001/ZOIC-DDoS-Attack-Tools-V3.git
 ```
 ```
-cd ZOIC-DDoS-Attack-Tools-V3/'ZOIC V3'
+cd ZOIC-DDoS-Attack-Tools-V3/ZOIC
 ```
 ```
 ls
