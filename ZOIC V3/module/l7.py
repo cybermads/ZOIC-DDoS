@@ -90,8 +90,7 @@ def logo():
     overflow commands line:
     
     cookie |  COOKIE overflow Attack [FIX]      
-                              
-                                            
+                                                                       
 """))
 
 def layer7():
