@@ -301,7 +301,7 @@ def layer7():
             
             print(Colorate.Horizontal(Colors.green_to_white, "[+] Loading ZOIC..."))    
 
-            start_threads(url, num_threads, post_request)
+            start_threads(url, num_threads, head_request)
 
         elif select == "cookie" or select.lower() == "4":
             def collect_cookies(url, cookie_size): 
