@@ -151,7 +151,7 @@ def layer7():
 """))
             
             num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@THREADS(5~20)]                                                                   
+═══[root@THREADS(5~30)]                                                                   
 ═══> 
 """)))
             
@@ -222,7 +222,7 @@ def layer7():
 """))
             
             num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@THREADS(5~20)]                                                                   
+═══[root@THREADS(5~30)]                                                                   
 ═══> 
 """)))
             
@@ -289,7 +289,7 @@ def layer7():
 """))
             
             num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@THREADS(5~20)]                                                                   
+═══[root@THREADS(5~30)]                                                                   
 ═══> 
 """)))
             
@@ -373,12 +373,12 @@ def layer7():
 """))
 
             num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue, """
-═══[root@THREADS(5~20)]                                                                   
+═══[root@THREADS(5~30)]                                                                   
 ═══> 
 """)))
 
             cookie_size = int(input(Colorate.Horizontal(Colors.green_to_blue, """
-═══[root@COOKIE-SIZE(300~1000)]                                                                   
+═══[root@COOKIE-SIZE(1000~5000)]                                                                   
 ═══> 
 """)))
 
@@ -440,7 +440,7 @@ def layer7():
 """))
             
             num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@THREADS(5~20)]                                                                   
+═══[root@THREADS(5~30)]                                                                   
 ═══> 
 """)))
             
