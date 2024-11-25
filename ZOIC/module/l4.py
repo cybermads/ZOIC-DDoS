@@ -26,9 +26,7 @@ def logo():
         
     syn   |  syn flood attack
     udp   |  udp flood attack
-    exit  |  exit layer3 menu
-
-          
+    
 """))
 
 def layer4():
