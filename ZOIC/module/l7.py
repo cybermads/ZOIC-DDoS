@@ -151,12 +151,12 @@ def layer7():
 """))
             
             num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@THREADS(5~15)]                                                                   
+═══[root@THREADS(5~20)]                                                                   
 ═══> 
 """)))
             
             get_request = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@GET-REQUEST(1000~5000)]                                                                   
+═══[root@GET-REQUEST(300~1000)]                                                                   
 ═══> 
 """)))
             
@@ -222,12 +222,12 @@ def layer7():
 """))
             
             num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@THREADS(5~15)]                                                                   
+═══[root@THREADS(5~20)]                                                                   
 ═══> 
 """)))
             
             post_request = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@GET-REQUEST(1000~5000)]                                                                   
+═══[root@GET-REQUEST(300~1000)]                                                                   
 ═══> 
 """)))
             
@@ -289,12 +289,12 @@ def layer7():
 """))
             
             num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@THREADS(5~15)]                                                                   
+═══[root@THREADS(5~20)]                                                                   
 ═══> 
 """)))
             
             head_request = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@GET-REQUEST(1000~5000)]                                                                   
+═══[root@GET-REQUEST(300~1000)]                                                                   
 ═══> 
 """)))
             
@@ -373,12 +373,12 @@ def layer7():
 """))
 
             num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue, """
-═══[root@THREADS(5~15)]                                                                   
+═══[root@THREADS(5~20)]                                                                   
 ═══> 
 """)))
 
             cookie_size = int(input(Colorate.Horizontal(Colors.green_to_blue, """
-═══[root@COOKIE-SIZE(1000~5000)]                                                                   
+═══[root@COOKIE-SIZE(300~1000)]                                                                   
 ═══> 
 """)))
 
@@ -440,12 +440,12 @@ def layer7():
 """))
             
             num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@THREADS(5~15)]                                                                   
+═══[root@THREADS(5~20)]                                                                   
 ═══> 
 """)))
             
             get_request = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@HTTP2-REQUEST(1000~5000)]                                                                   
+═══[root@HTTP2-REQUEST(300~1000)]                                                                   
 ═══> 
 """)))
             print(Colorate.Horizontal(Colors.green_to_white, "[+] Loading ZOIC..."))  
