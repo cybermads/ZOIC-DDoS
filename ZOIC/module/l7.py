@@ -227,7 +227,7 @@ def layer7():
 """)))
             
             post_request = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@GET-REQUEST(300~1000)]                                                                   
+═══[root@POST-REQUEST(300~1000)]                                                                   
 ═══> 
 """)))
             
@@ -294,7 +294,7 @@ def layer7():
 """)))
             
             head_request = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@GET-REQUEST(300~1000)]                                                                   
+═══[root@HEAD-REQUEST(300~1000)]                                                                   
 ═══> 
 """)))
             
