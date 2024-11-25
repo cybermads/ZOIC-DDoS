@@ -6,7 +6,8 @@
 
 # ZOIC - EXE FILE 🔥
 **https://www.mediafire.com/file/n1mb5covge0d0ou/ZOIC_V3.exe/file**
-![image](https://github.com/user-attachments/assets/5c30bd75-dce2-4506-8912-a99d83bcefb9)
+![image](https://github.com/user-attachments/assets/f4cde258-5feb-4e53-bcb2-d9a96579d27c)
+
 
 # ScreenShot📷:
 ![image](https://github.com/user-attachments/assets/05609227-a8a5-4819-95ac-e1ddf2908022)
