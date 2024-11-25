@@ -4,7 +4,7 @@
 - **COOKIE Overflow 🍪**
 - **HTTP/2 Request**
 
-# ZOIC - EXE FILE 🔥
+# ZOIC - exe FILE 🔥
 **https://www.mediafire.com/file/n1mb5covge0d0ou/ZOIC_V3.exe/file**
 ![image](https://github.com/user-attachments/assets/5db3e82a-cc32-4e3a-a01e-ff79aa24922f)
 
