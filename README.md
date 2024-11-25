@@ -5,6 +5,7 @@
 - **HTTP/2 Request**
 
 # ZOIC - EXE FILE 🔥
+![image](https://github.com/user-attachments/assets/6cb61d3d-70df-4a65-bf54-130c02187bd6)
 **https://www.mediafire.com/file/n1mb5covge0d0ou/ZOIC_V3.exe/file**
 # ScreenShot📷:
 ![image](https://github.com/user-attachments/assets/05609227-a8a5-4819-95ac-e1ddf2908022)
