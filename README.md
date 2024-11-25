@@ -1,11 +1,10 @@
 # ZOIC - DDoS Attack Toolkit V3 🔥
 
 - **version 3.0 ✅**
-- **COOKIE Overflow 🍪**
-- **HTTP/2 Request**
+- **HEAD Request FIX ✅**
 
 # ZOIC - exe File 🔥
-**https://www.mediafire.com/file/v9zv9hygndofh7t/ZOIC_V3.exe/file**
+**https://www.mediafire.com/file/k109g35lyad2u5k/ZOIC_V3.exe/file**
 ![image](https://github.com/user-attachments/assets/5db3e82a-cc32-4e3a-a01e-ff79aa24922f)
 
 
