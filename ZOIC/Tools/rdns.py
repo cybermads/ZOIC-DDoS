@@ -16,7 +16,7 @@ def rdns():
     s = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
 
     ip = input(Colorate.Horizontal(Colors.green_to_blue,"""
-═══[root@URL]                                                                   
+═══[root@IP]                                                                   
 ═══> 
 """))
 
