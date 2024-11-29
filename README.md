@@ -1,7 +1,7 @@
 # ZOIC - DDoS Attack Toolkit V3 🔥
 
 - **version 3.0 ✅**
-- **remake soon..**
+- **remake soon...**
 
 # ZOIC - exe File 🔥
 **https://www.mediafire.com/file/8ymf25rlcblza33/ZOIC_V3.exe/file**
