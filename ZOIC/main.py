@@ -26,7 +26,7 @@ def main():
     while True:
         logo()
         select = input(Colorate.Horizontal(Colors.green_to_blue,"""
-╔═══[root@ZOIC~$]~$
+╔═══[root@ZOIC~$]
 ╚══> """))
                                         
         if select == "method" or select.lower() == "h":
