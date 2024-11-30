@@ -143,7 +143,7 @@ def layer7():
                 }
                 try:
                     async with session.get(url, headers=headers) as response:
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} GET Request : {get_request} Status : {response.status}"))
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Request sent."))
                 except aiohttp.ClientConnectorError:
                     print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                     if retries > 0:
