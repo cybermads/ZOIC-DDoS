@@ -1,13 +1,14 @@
 # ZOIC - DDoS Attack Tools V3 Remake 🔥
 
-- **version 3.0 ✅**
+- **Remake !**
 - **CloudFlare Bypass ✅**
 - **DDoS Guard Bypass ✅**
 - **ProxyRequest Attack ✅**
 
 # ZOIC - exe File 🔥
 **https://www.mediafire.com/file/8ymf25rlcblza33/ZOIC_V3.exe/file**
-![image](https://github.com/user-attachments/assets/5db3e82a-cc32-4e3a-a01e-ff79aa24922f)
+![image](https://github.com/user-attachments/assets/8c13b83f-6282-4db5-aa70-a4aa214d58bf)
+
 
 
 
