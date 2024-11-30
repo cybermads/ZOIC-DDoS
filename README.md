@@ -13,7 +13,8 @@
 
 
 # ScreenShot📷:
-![image](https://github.com/user-attachments/assets/05609227-a8a5-4819-95ac-e1ddf2908022)
+![image](https://github.com/user-attachments/assets/d1c96943-704e-410c-93f2-5a475140fcd2)
+
 
 
 
