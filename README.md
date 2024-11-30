@@ -22,7 +22,8 @@ https://www.mediafire.com/file/doo3e5iaf603zrp/ZOIC_DDoS.exe/file
 # LAYER 4 🔥
 ![image](https://github.com/user-attachments/assets/e8a17a43-9072-4e9e-9adb-13ae3e88ad70)
 ![image](https://github.com/user-attachments/assets/5e78f4bb-6132-4382-bbf3-c3696eb925f3)
-![image](https://github.com/user-attachments/assets/c2aca1d2-fdb9-44d8-8c96-856131fc69a0)
+![image](https://github.com/user-attachments/assets/942ec2bc-197b-43c9-bd88-6f334fc13ef2)
+
 
 
 # LAYER 7 🔥
