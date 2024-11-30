@@ -1,4 +1,3 @@
-import nmap
 import os
 from pystyle import Colorate, Colors
 
