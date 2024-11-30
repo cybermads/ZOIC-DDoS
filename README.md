@@ -1,4 +1,4 @@
-# ZOIC - DDoS Attack Tools V3 Remake 🔥
+# ZOIC - DDoS Attack Tools Remake 🔥
 
 - **Remake !**
 - **CloudFlare Bypass ✅**
