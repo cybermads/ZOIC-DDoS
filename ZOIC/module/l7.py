@@ -161,8 +161,7 @@ def layer7():
                             await send_request(session, url, retries - 1)
 
             async def send_requests(url, get_request):
-                connector = aiohttp.TCPConnector(ssl=False)
-                async with aiohttp.ClientSession(connector=connector) as session:
+                async with aiohttp.ClientSession() as session:
                     tasks = [send_request(session, url) for _ in range(get_request)]
                     await asyncio.gather(*tasks)
 
