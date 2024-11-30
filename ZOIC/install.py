@@ -26,7 +26,6 @@ def install():
  ╚════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝    ╚═════╝     ╚═╝ ╚═════╝
           """)
     os.system("pip install aiosonic --break-system-packages")
-    os.system("pip install re --break-system-packages")
     os.system("pip install cloudscraper --break-system-packages")
     os.system("pip install aiohttp --break-system-packages")
     os.system("pip install scapy --break-system-packages")
