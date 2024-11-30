@@ -1,7 +1,7 @@
 # ZOIC - DDoS Attack Tools Remake 🔥
 
 - **Remake !! 🔥**
-- **Bug fix ✅**
+- **Bug fix ✅** 
 - **CloudFlare Bypass ✅**
 - **DDoS Guard Bypass ✅**
 - **ProxyRequest Attack ✅**
@@ -37,7 +37,7 @@ cd ZOIC-DDoS-Attack-Tools/ZOIC
 ls
 ```
 ```
-python install.py
+python setup.py
 ```
 ```
 python main.py
