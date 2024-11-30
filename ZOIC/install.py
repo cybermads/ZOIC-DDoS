@@ -17,7 +17,6 @@ def install():
            
                             
 """))
-    os.system('cls' if os.name == 'nt' else 'clear')
     print("""
      ██╗ ██████╗ ██╗  ██╗███╗   ██╗    ██████╗     ██╗ ██████╗ 
      ██║██╔═══██╗██║  ██║████╗  ██║    ╚════██╗██╗███║██╔════╝ 
@@ -26,11 +25,11 @@ def install():
 ╚█████╔╝╚██████╔╝██║  ██║██║ ╚████║    ██████╔╝╚═╝ ██║╚██████╔╝
  ╚════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝    ╚═════╝     ╚═╝ ╚═════╝
           """)
-    os.system("pip install aiosonic")
-    os.system("pip install re")
-    os.system("pip install cloudscraper")
-    os.system("pip install aiohttp")
-    os.system("pip install scapy")
+    os.system("pip install aiosonic --break-system-packages")
+    os.system("pip install re --break-system-packages")
+    os.system("pip install cloudscraper --break-system-packages")
+    os.system("pip install aiohttp --break-system-packages")
+    os.system("pip install scapy --break-system-packages")
     os.system("git pull")
 
 if __name__ == "__main__":
