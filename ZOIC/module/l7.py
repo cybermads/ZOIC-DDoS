@@ -327,7 +327,7 @@ def layer7():
                     }
                     try:
                         response = await client.get(url, headers=headers)
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} HTTP 2.0 Request : {get_request} Status : {response.status}"))
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} HTTP 2.0 Request : {get_request} Status : {response.status_code}"))
                     except aiosonic.exceptions.HttpParsingError:
                         print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                         if retries > 0:
