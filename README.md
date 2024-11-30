@@ -6,7 +6,6 @@
 - **ProxyRequest Attack ✅**
 
 # ZOIC - exe File 🔥
-**https://www.mediafire.com/file/8ymf25rlcblza33/ZOIC_V3.exe/file**
 ![image](https://github.com/user-attachments/assets/8c13b83f-6282-4db5-aa70-a4aa214d58bf)
 
 
