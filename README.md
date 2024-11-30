@@ -27,16 +27,11 @@
 # LAYER 7 🔥
 ![image](https://github.com/user-attachments/assets/e0921fc3-0407-4b41-8f50-0c90716dfe4b)
 ![image](https://github.com/user-attachments/assets/f0493dbc-1fd3-47dc-8be9-1fde6e983461)
-![image](https://github.com/user-attachments/assets/5692c39c-9a19-45dc-ac16-c5bbf51d7d53)
+![image](https://github.com/user-attachments/assets/6a697ebe-d5a3-4c04-bef0-7fcd8421cd52)
+
 
 
 # HOW TO USE ❓
-```
-pip install aiohttp
-```
-```
-pip install scapy
-```
 ```
 git clone https://github.com/madanokr001/ZOIC-DDoS-Attack-Tools.git
 ```
@@ -45,6 +40,9 @@ cd ZOIC-DDoS-Attack-Tools/ZOIC
 ```
 ```
 ls
+```
+```
+python install.py
 ```
 ```
 python main.py
