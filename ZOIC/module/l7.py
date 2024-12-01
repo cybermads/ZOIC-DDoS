@@ -119,8 +119,8 @@ def layer7():
                                                                                     
         ╔═════════════════════════════════════════════════╗
         ║                                                 ║
-        ║  - dgb   |  DDoS Guard Bypass with Request      ║
-        ║  - cfb   |  CloudFlare Bypass with Request      ║
+        ║  - dgb   |  NOT WORK                            ║ 
+        ║  - cfb   |  NOT WORK                            ║
         ║  - get   |  GET Request Attack                  ║
         ║  - post  |  POST Request Attack                 ║
         ║  - head  |  HEAD Request Attack                 ║
