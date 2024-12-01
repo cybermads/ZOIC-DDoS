@@ -12,7 +12,7 @@ def method_main():
                                                                                     
             ╔═════════════════════════════════════╗
             ║                                     ║
-            ║  - layer7  |  [FIX..]               ║
+            ║  - layer7  |  show l7 module        ║
             ║  - layer4  |  show l4 module        ║
             ║  - Tools   |  show Tools module     ║
             ║                                     ║
