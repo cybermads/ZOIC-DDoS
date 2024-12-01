@@ -9,9 +9,7 @@
 ![image](https://github.com/user-attachments/assets/75e3f0cc-b0db-4f6a-bffe-2f66702e0083)
 ![image](https://github.com/user-attachments/assets/0a232b55-c541-4927-bded-38557e16c8ae)
 
-- **HOW TO FIX ✅**
-
-![image](https://github.com/user-attachments/assets/f7119ea8-a984-4033-afe5-93b72e643fe5)
+I FIX THIS WAIT PLS
 
 
 
