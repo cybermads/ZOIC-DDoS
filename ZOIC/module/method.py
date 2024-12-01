@@ -13,7 +13,7 @@ def method_main():
             ╔═════════════════════════════════════╗
             ║                                     ║
             ║  - layer7  |  show l7 module        ║
-            ║  - layer4  |  [FIX...]              ║
+            ║  - layer4  |  show l4 module        ║
             ║  - Tools   |  show Tools module     ║
             ║                                     ║
             ║  - PLS PROJECT STAR                 ║
