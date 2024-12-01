@@ -33,7 +33,8 @@ def main():
             method_main()
 
         elif select == "layer7" or select.lower() == "l7":
-            layer7()
+            print("close")
+            input()
 
         elif select == "layer4" or select.lower() == "l4":
             layer4()
