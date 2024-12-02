@@ -1,5 +1,5 @@
 # ZOIC - DDoS Attack Tools Remake 🔥
-- **Layer7 Runtime Error FIX ✅**
+- **version 3.0 ✅**
 
 # ScreenShot📷:
 ![image](https://github.com/user-attachments/assets/95497f6c-9954-469a-a75b-cde236f27ec2)
