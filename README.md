@@ -1,17 +1,9 @@
 # ZOIC - DDoS Attack Tools Remake 🔥
 - **Remake !! 🔥**
 - **Layer7 fix ✅** 
-- **CloudFlare Bypass ✅**
-- **DDoS Guard Bypass ✅**
+- **CloudFlare Bypass FIX ✅**
+- **DDoS Guard Bypass FIX ✅**
 - **ProxyRequest Attack ✅**
-
-# Layer7 Runtime Error [OK] ✅
-![image](https://github.com/user-attachments/assets/75e3f0cc-b0db-4f6a-bffe-2f66702e0083)
-![image](https://github.com/user-attachments/assets/0a232b55-c541-4927-bded-38557e16c8ae)
-
-
-
-
 
 
 # ScreenShot📷:
