@@ -3,8 +3,6 @@
 
 # ScreenShot📷:
 ![image](https://github.com/user-attachments/assets/95497f6c-9954-469a-a75b-cde236f27ec2)
-![image](https://github.com/user-attachments/assets/c1337e15-bab9-4e8d-9320-5b4a9ff61f83)
-
 
 # LAYER 4 🔥
 ![image](https://github.com/user-attachments/assets/e8a17a43-9072-4e9e-9adb-13ae3e88ad70)
