@@ -41,7 +41,7 @@ def Tools_main():
                 ╚═════════════════════════════════╝
 
 """))
-            input(Colorate.Horizontal(Colors.blue_to_cyan, f"[+] Enter the continew..."))
+            input("")
 
 
         elif select == "port" or select.lower() == "p":
