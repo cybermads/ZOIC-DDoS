@@ -23,4 +23,4 @@ def method_main():
  
 """))
     
-    input(Colorate.Horizontal(Colors.blue_to_cyan, f"[+] Enter the continew..."))
+    input("")
