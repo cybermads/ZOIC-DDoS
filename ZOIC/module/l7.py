@@ -134,7 +134,7 @@ def layer7():
         ╚═════════════════════════════════════════════════╝
 
 """))
-            input(Colorate.Horizontal(Colors.blue_to_cyan, f"[+] Enter the continew..."))
+            input("")
 
         if select == "get" or select.lower() == "g":
             async def send_request(session, url, retries=3):
