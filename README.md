@@ -1,4 +1,4 @@
-# ZOIC - DDoS Attack Tools Remake 🔥
+# ZOIC - DDoS Attack Tools 🔥
 - **version 3.0 ✅**
 
 # ScreenShot📷:
