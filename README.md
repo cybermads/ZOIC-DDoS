@@ -27,13 +27,16 @@
 git clone https://github.com/madanokr001/ZOIC-DDoS-Attack-Tools.git
 ```
 ```
-cd ZOIC-DDoS-Attack-Tools/ZOIC
+cd ZOIC-DDoS-Attack-Tools
 ```
 ```
 ls
 ```
 ```
 python setup.py
+```
+```
+cd ZOIC
 ```
 ```
 python main.py
