@@ -52,7 +52,7 @@ def Tools_main():
             
             os.system(f"nmap {ip_address}")
 
-            input("")
+            input(Colorate.Horizontal(Colors.cyan_to_green,"[ZOIC] Enter the continue..."))
 
             
             
