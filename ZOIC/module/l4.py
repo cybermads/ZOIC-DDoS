@@ -48,7 +48,7 @@ def layer4():
 
 """))
             
-            input("")
+            input(Colorate.Horizontal(Colors.cyan_to_green,"[ZOIC] Enter the continue..."))
 
 
         elif select == "syn" or select.lower() == "1":
