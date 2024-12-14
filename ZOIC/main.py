@@ -23,7 +23,7 @@ def check_main():
                      
 """))
     subprocess.run("git pull", shell=True, stdout=subprocess.DEVNULL)
-    input()
+    input(Colorate.Horizontal(Colors.cyan_to_green,"[INFO] Enter the continue..."))
     
 def logo():
     os.system('cls' if os.name == 'nt' else 'clear')
