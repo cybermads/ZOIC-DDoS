@@ -23,4 +23,4 @@ def method_main():
  
 """))
     
-    input("")
+    input(Colorate.Horizontal(Colors.cyan_to_green,"[ZOIC] Enter the continue..."))
