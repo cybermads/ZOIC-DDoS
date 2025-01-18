@@ -1,4 +1,4 @@
-# ZOIC - DDoS Attack Tools 🔥
+# V4 Soon... 🔥
 - **version 3.0 ✅**
 
 # ScreenShot📷:
@@ -23,7 +23,7 @@
 git clone https://github.com/madanokr001/ZOIC-DDoS-Attack-Tools.git
 ```
 ```
-cd ZOIC-DDoS-Attack-Tools
+cd ZOIC-DDoS
 ```
 ```
 ls
