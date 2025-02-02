@@ -28,9 +28,9 @@ def logo():
 ╚═════════════════════════════════════════════════════╝
           
 ╔═════════════════════════════════════════════════════╗
-║ {zoic}[{clear}1{zoic}]{clear} ICMP Flood Attack                                  ║
-║ {zoic}[{clear}2{zoic}]{clear} Ping Of Death Attack                               ║                       
-║ {zoic}[{clear}3{zoic}]{clear} Exit ZOIC                                          ║                                 
+║ {zoic}[{clear}1{zoic}]{clear} ICMP Flood Attack                               ║
+║ {zoic}[{clear}2{zoic}]{clear} Ping Of Death Attack                            ║                       
+║ {zoic}[{clear}3{zoic}]{clear} Exit ZOIC                                       ║                                 
 ╚═════════════════════════════════════════════════════╝  
 """)
     
