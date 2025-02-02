@@ -4,7 +4,6 @@
 - **version 4.0 ✅**
 
 # ScreenShot📷:
-![image](https://github.com/user-attachments/assets/95497f6c-9954-469a-a75b-cde236f27ec2)
 
 # LAYER 4 🔥
 
