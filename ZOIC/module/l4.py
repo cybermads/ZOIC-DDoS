@@ -57,7 +57,7 @@ def layer4():
                         tcp_header = TCP(sport=sport, dport=port, flags='S', seq=seq)
 
                         packet = bytes(ip_header / tcp_header)
-                        print(f"[{zoic}ZOIC{clear}] IP Address {zoic}:{clear} {target} {zoic}|{clear} SYN Packet {zoic}:{clear} {zoic}{ip_header / tcp_header}{clear}")
+                        print(f"[{zoic}ZOIC{clear}] IP Address {zoic}:{clear} {target} {zoic}|{clear} SYN Packet {white}:{clear} {zoic}{ip_header / tcp_header}{clear}")
                         s.sendto(packet, (target, port)) 
 
                 except Exception as e:
