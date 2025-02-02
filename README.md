@@ -31,7 +31,7 @@ cd ZOIC-DDoS/ZOIC
 ls
 ```
 ```
-python main.py
+python zoic.py
 ```
 
 ## WINDOWS ✅
