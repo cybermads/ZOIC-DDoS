@@ -76,14 +76,14 @@ def logo():
 ║ {zoic}*{clear} Github    {zoic}:{clear}   https://github.com/madanokr001      ║
 ║ {zoic}*{clear} DoxServer {zoic}:{clear}   https://rvlt.gg/PnjMbQwH            ║
 ║ {zoic}*{clear} version   {zoic}:{clear}   4.0                                 ║
-║ {zoic}*{clear} ZOIC      {zoic}:{clear}  {zoic}[{clear}{white}LAYER7{clear}{zoic}]{clear}                            ║  
+║ {zoic}*{clear} ZOIC      {zoic}:{clear}  {zoic}[{clear}{white}LAYER7{clear}{zoic}]{clear}                             ║  
 ╚═════════════════════════════════════════════════════╝
                
 ╔═════════════════════════════════════════════════════╗
 ║ {zoic}[{clear}1{zoic}]{clear} HTTP Flood Attack                               ║
 ║ {zoic}[{clear}2{zoic}]{clear} HTTP Flood Attack {zoic}[{clear}{white}PROXY{clear}{zoic}]{clear}                       ║                       
 ║ {zoic}[{clear}3{zoic}]{clear} Exit ZOIC                                       ║                                 
-╚═════════════════════════════════════════════════════╝          
+╚═════════════════════════════════════════════════════╝           
 """)
 
 def layer7():
