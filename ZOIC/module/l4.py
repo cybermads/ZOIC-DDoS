@@ -97,7 +97,7 @@ def layer4():
 
                         s.sendto(data, (target, port))
 
-                        print(f"[{zoic}ZOIC{clear}] IP Address {zoic}:{clear} {target} {zoic}|{clear} UDP Packet {zoic}:{clear} {zoic}65507{clear}")
+                        print(f"[{zoic}ZOIC{clear}] IP Address {zoic}:{clear} {target} {zoic}|{clear} UDP Packet {zoic}:{clear} {white}65507{clear}")
 
                 except Exception as e:
                     print(f"{red}......................ERROR......................{clear}")
