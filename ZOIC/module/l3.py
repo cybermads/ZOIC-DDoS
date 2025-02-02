@@ -50,7 +50,7 @@ def layer3():
 
                         send(packet, verbose=False)
 
-                        print(f"[{zoic}ZOIC{clear}] IP Address {zoic}:{clear} {target} {zoic}|{clear} ICMP Packet {zoic}:{clear} {zoic}65500{clear}")
+                        print(f"[{zoic}ZOIC{clear}] IP Address {zoic}:{clear} {target} {zoic}|{clear} ICMP Packet {zoic}:{clear} {white}65500{clear}")
 
                 except Exception as e:
                     print(f"[{red}WARNING{clear}] Check your permissions or install {zoic}Npcap{clear} : https://npcap.com/#download")
