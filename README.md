@@ -25,16 +25,10 @@
 git clone https://github.com/madanokr001/ZOIC-DDoS.git
 ```
 ```
-cd ZOIC-DDoS
+cd ZOIC-DDoS/ZOIC
 ```
 ```
 ls
-```
-```
-python setup.py
-```
-```
-cd ZOIC
 ```
 ```
 python main.py
