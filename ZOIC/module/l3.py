@@ -2,6 +2,7 @@ import os
 import random
 import threading
 import time
+import sys
 from scapy.all import IP, ICMP, send
 
 zoic = "\033[38;5;118m"
@@ -82,6 +83,9 @@ def layer3():
             target = input(f"[{zoic}ZOIC{clear}] IP {zoic}>{clear} ")
 
             ping(target)
+
+        elif select == "3" or select.lower() == "3":
+            sys.exit()
 
 
 
