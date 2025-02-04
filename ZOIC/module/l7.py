@@ -102,7 +102,7 @@ def layer7():
                     async with session.get(url, headers=headers) as response:
                         print(f"[{zoic}ZOIC{clear}] Url {zoic}:{clear} {url} {zoic}|{clear} Status {zoic}:{clear} {red}{response.status}{clear}")
                 except aiohttp.ClientConnectorError:
-                    print(f"[{red}-{clear}] {red}Server down by ZOIC !!{clear}")
+                    print(f"[{red}-{clear}] {red}Server has down by ZOIC !!{clear}")
                     if retries > 0:
                         await asyncio.sleep(2)
                         await send_request(session, url, retries - 1)
@@ -149,7 +149,7 @@ def layer7():
                     async with session.get(url, headers=headers) as response:
                         print(f"[{zoic}ZOIC{clear}] Url {zoic}:{clear} {zoic}{proxy}{clear} {zoic}>{clear} {url} {zoic}|{clear} Status {zoic}:{clear} {red}{response.status}{clear}")
                 except aiohttp.ClientConnectorError:
-                    print(f"[{red}-{clear}] {red}Server down by ZOIC !!{clear}")
+                    print(f"[{red}-{clear}] {red}Server has down by ZOIC !!{clear}")
                     if retries > 0:
                         await asyncio.sleep(2)
                         await send_request(session, url, proxy, retries - 1)
