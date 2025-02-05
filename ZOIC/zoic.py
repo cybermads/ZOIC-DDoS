@@ -25,10 +25,7 @@ def check_main():
     
     print(f"[{zoic}ZOIC{clear}] {white}Welcome ZOIC DDoS Attack Tools{clear}")
     print(f"[{zoic}ZOIC{clear}] {white}Join DoxGroup !! https://rvlt.gg/PnjMbQwH{clear}")
-    os.system("pip install aiohttp")
-    os.system("pip install scapy")
-    os.system("pip install re")
-    os.system("pip install requests")
+    os.system("pip install aiohttp --break-system-packages")
     input(f"[{zoic}ZOIC{clear}] {white}Enter the continue...{clear}")
     
 def logo():
