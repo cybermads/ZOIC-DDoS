@@ -1,7 +1,7 @@
 # ZOIC DDoS Attack Tools 🔥
 
 - **version 4.0 ✅**
-- **Add Layer3 Attack ✅**
+- **layer7 update soon 💀**
 
 # DoxGroup 😈
 **https://rvlt.gg/A6n8QXVN**
