@@ -29,8 +29,7 @@ def logo():
 ╚═════════════════════════════════════════════════════╝
           
 ╔═════════════════════════════════════════════════════╗
-║ {zoic}[{clear}1{zoic}]{clear} ICMP Flood Attack                               ║
-║ {zoic}[{clear}2{zoic}]{clear} Ping Of Death Attack {zoic}[{clear}{red}NOT WORK{clear}{zoic}]{clear}                 ║                       
+║ {zoic}[{clear}1{zoic}]{clear} ICMP Flood Attack                               ║                   
 ║ {zoic}[{clear}3{zoic}]{clear} Exit ZOIC                                       ║                                 
 ╚═════════════════════════════════════════════════════╝  
 """)
@@ -74,15 +73,7 @@ def layer3():
             threads = int(input(f"[{zoic}ZOIC{clear}] THREAD {zoic}>{clear} "))
 
             start_threads(target, threads)
-
-
-        elif select == "2" or select.lower() == "2":
-            def ping(target):
-                os.system(f"ping {target} -t -l 65500")
-
-            target = input(f"[{zoic}ZOIC{clear}] IP {zoic}>{clear} ")
-
-            ping(target)
+            
 
         elif select == "3" or select.lower() == "3":
             sys.exit()
