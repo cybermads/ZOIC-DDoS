@@ -1,7 +1,10 @@
 # ZOIC DDoS Attack Tools 🔥
 
 - **version 4.0 ✅**
-- **5.0 update coming soon**
+
+# V5 sneaks 👀
+![image](https://github.com/user-attachments/assets/2d9eebf7-c1f7-4116-9006-fb530d157f6f)
+
 
 # 1or0 😈
 **https://rvlt.gg/A6n8QXVN**
