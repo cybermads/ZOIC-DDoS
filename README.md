@@ -2,9 +2,6 @@
 
 - **version 4.0 ✅**
 
-# 1or0 😈
-**https://rvlt.gg/A6n8QXVN**
-
 # ScreenShot📷:
 ![image](https://github.com/user-attachments/assets/a4366d63-5841-4205-bdb0-70abd6214f16)
 
