@@ -2,6 +2,12 @@
 
 - **version 4.0 ✅**
 
+# Disclaimer 🚫
+
+**This project is created solely for educational and research purposes.  
+The developer does not promote or condone the use of this tool for unauthorized access, data theft, or any malicious activities.
+Using this software against systems you do not own or have explicit permission to test may be illegal and is strictly discouraged.**
+
 # ScreenShot📷:
 ![image](https://github.com/user-attachments/assets/a4366d63-5841-4205-bdb0-70abd6214f16)
 
