@@ -39,7 +39,7 @@ def logo():
 ╚══════╝ ╚═════╝ ╚═╝ ╚═════╝{clear}
           
 ╔═════════════════════════════════════════════════════╗
-║ {zoic}*{clear} Github    {zoic}:{clear}   https://github.com/madanokr001      ║
+║ {zoic}*{clear} Github    {zoic}:{clear}   https://github.com/cybermads        ║
 ║ {zoic}*{clear} DoxServer {zoic}:{clear}   https://rvlt.gg/PnjMbQwH            ║
 ║ {zoic}*{clear} version   {zoic}:{clear}   4.0                                 ║
 ║ {zoic}*{clear} Created   {zoic}:{clear}   CyberMAD                            ║
@@ -112,3 +112,4 @@ def main():
 if __name__ == "__main__":
     check_main()
     main()
+
