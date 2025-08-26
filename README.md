@@ -2,7 +2,7 @@
 
 - **version 4.0 ✅**
 - **new banner and l4, l7 script soon ✅️**
-- **botnet soon ✅️**
+- **C2 soon ✅️**
 
 # Disclaimer 🚫
 
