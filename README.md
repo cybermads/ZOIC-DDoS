@@ -1,7 +1,7 @@
 # ZOIC DDoS Attack Tools 🔥
 
 - **version 4.0 ✅**
-- **new l4, l7 script soon ✅️**
+- **new banner and l4, l7 script soon ✅️**
 - **botnet soon ✅️**
 
 # Disclaimer 🚫
