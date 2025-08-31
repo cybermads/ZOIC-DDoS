@@ -1,14 +1,8 @@
 # ZOIC DDoS Attack Tools 🔥
 
-- **version 4.0 ✅**
-- **new banner and l4, l7 script soon ✅️**
-<img width="1723" height="1176" alt="image" src="https://github.com/user-attachments/assets/f0a33f43-3105-4fcf-8d85-42ad75a256de" />
+- **version 5.0 ✅**
 
 # Disclaimer 🚫
-
-**This project is created solely for educational and research purposes.  
-The developer does not promote or condone the use of this tool for unauthorized access, data theft, or any malicious activities.
-Using this software against systems you do not own or have explicit permission to test may be illegal and is strictly discouraged.**
 
 # ScreenShot📷:
 ![image](https://github.com/user-attachments/assets/a4366d63-5841-4205-bdb0-70abd6214f16)
