@@ -2,7 +2,7 @@
 
 - **version 4.0 ✅**
 - **new banner and l4, l7 script soon ✅️**
-- **C2 soon ✅️**
+<img width="1723" height="1176" alt="image" src="https://github.com/user-attachments/assets/f0a33f43-3105-4fcf-8d85-42ad75a256de" />
 
 # Disclaimer 🚫
 
