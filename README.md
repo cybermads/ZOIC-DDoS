@@ -8,16 +8,20 @@
 
 
 # LAYER 4 🔥
-![image](https://github.com/user-attachments/assets/0deadccc-10b6-46cd-93f2-1ff7d08ff3b9)
-![image](https://github.com/user-attachments/assets/e2b21be6-9461-4abb-9224-35ccb14ad7c7)
+<img width="1355" height="741" alt="image" src="https://github.com/user-attachments/assets/86ad72cb-1c4d-4d56-8a1a-71ab3f1fde32" />
+
+<img width="1419" height="723" alt="image" src="https://github.com/user-attachments/assets/645fd6de-c11e-4dc3-97e0-e76c7057eccf" />
+
 
 
 
 
 
 # LAYER 7 🔥
-![image](https://github.com/user-attachments/assets/5e0da7cb-7372-4357-9983-9bddd83a8bbd)
-![image](https://github.com/user-attachments/assets/1a00cf86-0d39-42ea-ad91-4b299877a3d2)
+<img width="1388" height="781" alt="image" src="https://github.com/user-attachments/assets/74274468-c54e-4059-9eb9-5bf8f028441d" />
+
+<img width="1463" height="789" alt="image" src="https://github.com/user-attachments/assets/e2163ff3-e21f-4654-a49a-0c0247693eca" />
+
 
 
 
@@ -35,7 +39,7 @@ cd ZOIC-DDoS
 ls
 ```
 ```
-bash setup.sh
+bash setup.py
 ```
 
 ## WINDOWS ✅
