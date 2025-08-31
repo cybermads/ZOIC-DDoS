@@ -1,5 +1,6 @@
 import os
 from methods.l4 import *
+from methods.l7 import *
 from Tools.main import *
 
 zoic = "\033[38;5;118m"
@@ -63,4 +64,5 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
 
 if __name__ == "__main__":
     main()
+
 
