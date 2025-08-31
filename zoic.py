@@ -52,10 +52,14 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
 
         
         elif select == "l7":
-            print("")
+            layer7()
 
         elif select == "tools":
             tools()
+
+        elif select == "update":
+            os.system("git pull")
+            input()
 
             
     
@@ -64,5 +68,6 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
 
 if __name__ == "__main__":
     main()
+
 
 
