@@ -4,13 +4,7 @@
 
 # ScreenShot📷:
 <img width="1268" height="661" alt="image" src="https://github.com/user-attachments/assets/a296c929-4002-40cc-9c63-c2496dad143a" />
-
-
-# LAYER 3 🔥
-![image](https://github.com/user-attachments/assets/54d690bc-2c48-427d-96ef-00bd59f37e34)
-![image](https://github.com/user-attachments/assets/1d0c724e-b892-44fe-ae16-7b2c72a06de9)
-
-
+<img width="1297" height="744" alt="image" src="https://github.com/user-attachments/assets/7f3a7e48-372d-48e8-9a1b-9c1e80f4a520" />
 
 
 # LAYER 4 🔥
@@ -32,16 +26,16 @@
 
 # HOW TO USE ❓
 ```
-git clone https://github.com/madanokr001/ZOIC-DDoS.git
+git clone https://github.com/cybermads/ZOIC-DDoS.git
 ```
 ```
-cd ZOIC-DDoS/ZOIC
+cd ZOIC-DDoS
 ```
 ```
 ls
 ```
 ```
-python zoic.py
+bash setup.sh
 ```
 
 ## WINDOWS ✅
