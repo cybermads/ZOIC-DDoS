@@ -39,7 +39,7 @@ cd ZOIC-DDoS
 ls
 ```
 ```
-bash setup.py
+python setup.py
 ```
 
 ## WINDOWS ✅
