@@ -22,9 +22,9 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
                      ╩═╝╩ ╩ ╩ ╚═╝╩╚═  ╩   {clear}
                     github.com/cybermads
            {zoic}╔═══════════════════════════════════{clear}
-           {zoic}║{clear}  {zoic}-{clear} get     {zoic}|{clear} GET Requests Attack  {zoic}║{clear}         
-           {zoic}║{clear}  {zoic}-{clear} post    {zoic}|{clear} POST Requests Attack {zoic}║{clear}
-           {zoic}║{clear}  {zoic}-{clear} head    {zoic}|{clear} HEAD Requests Attack {zoic}║{clear}
+           {zoic}║{clear}  {zoic}-{clear} get     {zoic}|{clear} GET Requests Attack         
+           {zoic}║{clear}  {zoic}-{clear} post    {zoic}|{clear} POST Requests Attack 
+           {zoic}║{clear}  {zoic}-{clear} head    {zoic}|{clear} HEAD Requests Attack 
            {zoic}╚═══════════════════════════════════{clear}
 
 """)              
@@ -184,6 +184,7 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
 
 if __name__ == "__main__":
     layer7()
+
 
 
 
