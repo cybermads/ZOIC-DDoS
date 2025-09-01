@@ -79,6 +79,7 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
         ╩ ╩ ╩  ╩ ╩ ╩╚═╝╩ ╩  ╚═╝╚═╝╝╚╝ ╩ 
                     {clear} 
      {zoic}╔══════════════════════════════════{clear}
+     {zoic}║{clear} METHODS{zoic}:{clear} {zoic}[{clear}UDP{zoic}]{clear} 
      {zoic}║{clear} HOST{zoic}:{clear} {zoic}[{clear}{ip}{zoic}]{clear}                     
      {zoic}║{clear} PORT{zoic}:{clear} {zoic}[{clear}{port}{zoic}]{clear}                    
      {zoic}║{clear} THREADS{zoic}:{clear} {zoic}[{clear}{threads}{zoic}]{clear}                 
@@ -128,6 +129,7 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
         ╩ ╩ ╩  ╩ ╩ ╩╚═╝╩ ╩  ╚═╝╚═╝╝╚╝ ╩ 
                     {clear} 
      {zoic}╔══════════════════════════════════{clear}
+     {zoic}║{clear} METHODS{zoic}:{clear} {zoic}[{clear}TCP{zoic}]{clear}  
      {zoic}║{clear} HOST{zoic}:{clear} {zoic}[{clear}{ip}{zoic}]{clear}                       
      {zoic}║{clear} PORT{zoic}:{clear} {zoic}[{clear}{port}{zoic}]{clear}                    
      {zoic}║{clear} THREADS{zoic}:{clear} {zoic}[{clear}{threads}{zoic}]{clear}                   
@@ -138,6 +140,7 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
 
 if __name__ == "__main__":
     layer4()
+
 
 
 
