@@ -77,7 +77,7 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
       {zoic}║{clear} METHODS{zoic}:{clear} {zoic}[{clear}HTTP{zoic}]{clear} 
       {zoic}║{clear} URL{zoic}:{clear} {zoic}[{clear}{url}{zoic}]{clear}                
       {zoic}║{clear} THREADS{zoic}:{clear} {zoic}[{clear}{threads}{zoic}]{clear}                   
-      {zoic}║{clear} TIME{zoic}:{clear} {zoic}[{clear}{duration}{zoic}]{clear}                     
+      {zoic}║{clear} TIME{zoic}:{clear} {zoic}[{clear}{secs}{zoic}]{clear}                     
       {zoic}╚══════════════════════════════════{clear}       
 """)
             time.sleep(duration)
@@ -127,7 +127,7 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
         {zoic}║{clear} METHODS{zoic}:{clear} {zoic}[{clear}CloudFlare Bypass{zoic}]{clear} 
         {zoic}║{clear} URL{zoic}:{clear} {zoic}[{clear}{url}{zoic}]{clear}                
         {zoic}║{clear} THREADS{zoic}:{clear} {zoic}[{clear}{threads}{zoic}]{clear}                   
-        {zoic}║{clear} TIME{zoic}:{clear} {zoic}[{clear}{duration}{zoic}]{clear}                     
+        {zoic}║{clear} TIME{zoic}:{clear} {zoic}[{clear}{secs}{zoic}]{clear}                     
         {zoic}╚══════════════════════════════════{clear}       
             """)
             time.sleep(duration)
@@ -139,6 +139,7 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
 
 if __name__ == "__main__":
     layer7()
+
 
 
 
