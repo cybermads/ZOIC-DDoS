@@ -46,6 +46,7 @@ def layer7():
             _, url, threads, secs = parts
             threads = int(threads)
             secs = int(secs)
+            end_time = time.time() + secs
 
             def http_attack(url, end_time):
                 try:
@@ -94,6 +95,7 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
             _, url, threads, secs = parts
             threads = int(threads)
             secs = int(secs)
+            end_time = time.time() + secs  
             
             def cloudflare(url, end_time):
                 scraper = cloudscraper.create_scraper()
@@ -139,6 +141,7 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
 
 if __name__ == "__main__":
     layer7()
+
 
 
 
