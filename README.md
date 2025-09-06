@@ -18,8 +18,7 @@
 
 
 # LAYER 7 🔥
-<img width="1388" height="781" alt="image" src="https://github.com/user-attachments/assets/74274468-c54e-4059-9eb9-5bf8f028441d" />
-
+<img width="1387" height="712" alt="image" src="https://github.com/user-attachments/assets/a73361f1-87dd-4163-9262-26694e6ad9c2" />
 <img width="1463" height="789" alt="image" src="https://github.com/user-attachments/assets/e2163ff3-e21f-4654-a49a-0c0247693eca" />
 
 
