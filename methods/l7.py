@@ -80,7 +80,7 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
       {zoic}║{clear} TIME{zoic}:{clear} {zoic}[{clear}{secs}{zoic}]{clear}                     
       {zoic}╚══════════════════════════════════{clear}       
 """)
-            time.sleep(duration)
+            time.sleep(secs)
 
 ################################################################################################################################
 
@@ -130,7 +130,7 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
         {zoic}║{clear} TIME{zoic}:{clear} {zoic}[{clear}{secs}{zoic}]{clear}                     
         {zoic}╚══════════════════════════════════{clear}       
             """)
-            time.sleep(duration)
+            time.sleep(secs)
 
 
 
@@ -139,6 +139,7 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
 
 if __name__ == "__main__":
     layer7()
+
 
 
 
